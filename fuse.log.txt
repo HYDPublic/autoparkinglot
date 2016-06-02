@@ -1,0 +1,20 @@
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -o "D:/autoparkinglot/ram_test_isim_beh.exe" -prj "D:/autoparkinglot/ram_test_beh.prj" "work.ram_test" 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Parsing VHDL file "D:/autoparkinglot/ram.vhd" into library work
+Parsing VHDL file "D:/autoparkinglot/ram_test.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling architecture behavioral of entity ram [ram_default]
+Compiling architecture behavior of entity ram_test
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 6 VHDL Units
+Built simulation executable D:/autoparkinglot/ram_test_isim_beh.exe
+Fuse Memory Usage: 34956 KB
+Fuse CPU Usage: 592 ms

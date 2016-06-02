@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "D:/autoparkinglot/top_module.xst" -ofn "D:/autoparkinglot/top_module.syr" 
+xst -intstyle ise -ifn "D:/autoparkinglot/top_module.xst" -ofn "D:/autoparkinglot/top_module.syr" 
+xst -intstyle ise -ifn "D:/autoparkinglot/top_module.xst" -ofn "D:/autoparkinglot/top_module.syr" 
+xst -intstyle ise -ifn "D:/autoparkinglot/top_module.xst" -ofn "D:/autoparkinglot/top_module.syr" 
+xst -intstyle ise -ifn "D:/autoparkinglot/top_module.xst" -ofn "D:/autoparkinglot/top_module.syr" 

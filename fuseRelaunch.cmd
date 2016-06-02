@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "D:/autoparkinglot/ram_test_isim_beh.exe" -prj "D:/autoparkinglot/ram_test_beh.prj" "work.ram_test" 

@@ -1,0 +1,4 @@
+vhdl work "D:\autoparkinglot\led_decoder.vhd"
+vhdl work "D:\autoparkinglot\led_clock_divider.vhd"
+vhdl work "D:\autoparkinglot\ledcontroller.vhd"
+vhdl work "D:\autoparkinglot\top_module.vhd"
