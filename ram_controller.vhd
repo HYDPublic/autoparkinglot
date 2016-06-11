@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    19:21:40 05/31/2016 
+-- Create Date:    15:33:59 06/11/2016 
 -- Design Name: 
 -- Module Name:    ram_controller - Behavioral 
 -- Project Name: 
@@ -30,50 +30,74 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity ram_controller is
-	port(clk, rst : in STD_LOGIC;
-		  ac_add, ac_rmv, ac_show : in STD_LOGIC;
-		  address : in STD_LOGIC_VECTOR (7 downto 0);
-		  car_num : in STD_LOGIC_VECTOR (15 downto 0);
-		  car_data : out STD_LOGIC_VECTOR (27 downto 0));
+    Port ( clk, rst : in  STD_LOGIC;
+			  real_clk : in STD_LOGIC_VECTOR (15 downto 0);
+           address : in  STD_LOGIC_VECTOR (4 downto 0);
+			  car_num : in STD_LOGIC_VECTOR (15 downto 0);
+			  data_in : in  STD_LOGIC_VECTOR (31 downto 0);
+           data_out : out  STD_LOGIC_VECTOR (31 downto 0);
+			  car_out : out STD_LOGIC_VECTOR (23 downto 0);
+           ac_show, ac_add, ac_remove : in  STD_LOGIC);
 end ram_controller;
 
 architecture Behavioral of ram_controller is
-component ram is
-	Port ( clk, we, rst: in  STD_LOGIC;
-			 address : in STD_LOGIC_VECTOR (7 downto 0);
-			 data_in : in STD_LOGIC_VECTOR (27 downto 0);
-			 data_out : out STD_LOGIC_VECTOR (27 downto 0));
-end component;
-component ram_counter is
-    Port ( clk : in  STD_LOGIC;
-           rst : in  STD_LOGIC;
-           cnt : out  STD_LOGIC_VECTOR (7 downto 0));
-end component;
-
-signal address_cnt : STD_LOGIC_VECTOR (7 downto 0);
-
-signal car_info : STD_LOGIC_VECTOR (27 downto 0);
-signal we : STD_LOGIC;
-signal data_in : STD_LOGIC_VECTOR (27 downto 0);
-signal data_out : STD_LOGIC_VECTOR (27 downto 0);
-
+	component ram is
+	  PORT (
+		 clka : IN STD_LOGIC;
+		 rsta : IN STD_LOGIC;
+		 wea : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+		 addra : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+		 dina : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+		 douta : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+	  );	
+	end component;
+	component empty_address_finder is
+    Port ( clk, rst, ena : in STD_LOGIC;
+			  car_storage : in  STD_LOGIC_VECTOR (23 downto 0);
+			  find_event : out STD_LOGIC;
+           address : out  STD_LOGIC_VECTOR (4 downto 0));	
+	end component;
+	signal regi_data : STD_LOGIC_VECTOR (31 downto 0);
+	signal ram_wea : STD_LOGIC;
+	signal ram_clk : STD_LOGIC;
+	signal car_storage : STD_LOGIC_VECTOR (23 downto 0);
+	signal find_empty_event : STD_LOGIC;
+	signal find_empty_address : STD_LOGIC_VECTOR (4 downto 0);
+	signal find_empty_ena : STD_LOGIC;
 begin
-
-	ram_cnt : ram_counter port map(clk => clk, rst => rst, cnt => address_cnt);
-	car_ram : ram port map(clk => clk, we => '0', rst => rst, address => address_cnt, data_in => data_in, data_out => data_out);
-
-	process(ac_add) 
+	
+	
+	ram_clk <= ac_show and ac_add;
+	ram_wea <= '0' when ac_show = '1' else '1';
+	
+	car_ram : ram port map (clka => ram_clk,
+									rsta => rst,
+									wea => ram_wea,
+									addra => address,
+									dina => data_in,
+									douta => data_out);
+									
+	empty_addr_finder : empty_address_finder port map (clk => clk, 
+															  rst => rst, 
+															  ena => find_empty_ena, 
+															  car_storage => car_storage, 
+															  find_event => find_empty_event, 
+															  address => find_empty_address);
+	
+	process(find_evnet)
 	begin
-	
-	
+		if rising_edge(find_event) then
+			
+			--wea = 1
+			--clk = 1
+			--addra = find_empty_addr
+			--din = din
+			--dout = 따로 저장
+		end if;
 	end process;
 	
---	process (data_out)
---	begin
---		if data_out = x"0000000" then
---			address_cnt
---		end if;
---	end process;
+	car_out <= car_storage;
+	
 	
 end Behavioral;
 

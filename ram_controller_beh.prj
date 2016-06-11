@@ -1,0 +1,4 @@
+vhdl work "ipcore_dir/ram.vhd"
+vhdl work "counter_0_to_23.vhd"
+vhdl work "empty_address_finder.vhd"
+vhdl work "ram_controller.vhd"

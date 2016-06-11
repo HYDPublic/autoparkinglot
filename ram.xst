@@ -1,5 +1,0 @@
-set -tmpdir "D:/autoparkinglot/xst/projnav.tmp"
-set -xsthdpdir "D:/autoparkinglot/xst"
-elaborate
--ifn ram.prj
--ifmt mixed
