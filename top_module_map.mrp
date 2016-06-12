@@ -9,7 +9,7 @@ Target Device  : xc3s2000
 Target Package : fg456
 Target Speed   : -5
 Mapper Version : spartan3 -- $Revision: 1.55 $
-Mapped Date    : Sun Jun 12 14:51:47 2016
+Mapped Date    : Sun Jun 12 15:25:26 2016
 
 Design Summary
 --------------
@@ -38,9 +38,9 @@ Logic Distribution:
 
 Average Fanout of Non-Clock Nets:                2.82
 
-Peak Memory Usage:  294 MB
-Total REAL time to MAP completion:  4 secs 
-Total CPU time to MAP completion:   4 secs 
+Peak Memory Usage:  292 MB
+Total REAL time to MAP completion:  17 secs 
+Total CPU time to MAP completion:   2 secs 
 
 NOTES:
 
@@ -101,8 +101,8 @@ INFO:Security:50 - The XILINXD_LICENSE_FILE environment variable is set to
 INFO:Security:53 - The LM_LICENSE_FILE environment variable is not set.
 INFO:Security:56 - Part 'xc3s2000' is not a WebPack part.
 INFO:LIT:243 - Logical network dip_switch<4>_IBUF has no load.
-INFO:LIT:395 - The above info message is repeated 7 more times for the following
-   (max. 5 shown):
+INFO:LIT:395 - The above info message is repeated 40 more times for the
+   following (max. 5 shown):
    dip_switch<3>_IBUF,
    dip_switch<2>_IBUF,
    dip_switch<1>_IBUF,
@@ -116,8 +116,9 @@ INFO:LIT:244 - All of the single ended outputs in this design are using slew
 
 Section 4 - Removed Logic Summary
 ---------------------------------
+   3 block(s) removed
    4 block(s) optimized away
-   1 signal(s) removed
+  35 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
@@ -133,6 +134,45 @@ above the place where that logic is listed in the trimming report, then locate
 the lines that are least indented (begin at the leftmost edge).
 
 The signal "u_image_rom/N0" is sourceless and has been removed.
+The signal "ram_ctrl/car_ram/douta<31>" is sourceless and has been removed.
+The signal "ram_ctrl/car_ram/douta<30>" is sourceless and has been removed.
+The signal "ram_ctrl/car_ram/douta<29>" is sourceless and has been removed.
+The signal "ram_ctrl/car_ram/douta<28>" is sourceless and has been removed.
+The signal "ram_ctrl/car_ram/douta<27>" is sourceless and has been removed.
+The signal "ram_ctrl/car_ram/douta<26>" is sourceless and has been removed.
+The signal "ram_ctrl/car_ram/douta<25>" is sourceless and has been removed.
+The signal "ram_ctrl/car_ram/douta<24>" is sourceless and has been removed.
+The signal "ram_ctrl/car_ram/douta<23>" is sourceless and has been removed.
+The signal "ram_ctrl/car_ram/douta<22>" is sourceless and has been removed.
+The signal "ram_ctrl/car_ram/douta<21>" is sourceless and has been removed.
+The signal "ram_ctrl/car_ram/douta<20>" is sourceless and has been removed.
+The signal "ram_ctrl/car_ram/douta<19>" is sourceless and has been removed.
+The signal "ram_ctrl/car_ram/douta<18>" is sourceless and has been removed.
+The signal "ram_ctrl/car_ram/douta<17>" is sourceless and has been removed.
+The signal "ram_ctrl/car_ram/douta<16>" is sourceless and has been removed.
+The signal "ram_ctrl/car_ram/douta<15>" is sourceless and has been removed.
+The signal "ram_ctrl/car_ram/douta<14>" is sourceless and has been removed.
+The signal "ram_ctrl/car_ram/douta<13>" is sourceless and has been removed.
+The signal "ram_ctrl/car_ram/douta<12>" is sourceless and has been removed.
+The signal "ram_ctrl/car_ram/douta<11>" is sourceless and has been removed.
+The signal "ram_ctrl/car_ram/douta<10>" is sourceless and has been removed.
+The signal "ram_ctrl/car_ram/douta<9>" is sourceless and has been removed.
+The signal "ram_ctrl/car_ram/douta<8>" is sourceless and has been removed.
+The signal "ram_ctrl/car_ram/douta<7>" is sourceless and has been removed.
+The signal "ram_ctrl/car_ram/douta<6>" is sourceless and has been removed.
+The signal "ram_ctrl/car_ram/douta<5>" is sourceless and has been removed.
+The signal "ram_ctrl/car_ram/douta<4>" is sourceless and has been removed.
+The signal "ram_ctrl/car_ram/douta<3>" is sourceless and has been removed.
+The signal "ram_ctrl/car_ram/douta<2>" is sourceless and has been removed.
+The signal "ram_ctrl/car_ram/douta<1>" is sourceless and has been removed.
+The signal "ram_ctrl/car_ram/douta<0>" is sourceless and has been removed.
+The signal "ram_ctrl/car_ram/N0" is sourceless and has been removed.
+The signal "ram_ctrl/car_ram/N1" is sourceless and has been removed.
+Unused block
+"ram_ctrl/car_ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.c
+str/ramloop[0].ram.r/s3_noinit.ram/spram.ram" (RAMB16_S36_S36) removed.
+Unused block "ram_ctrl/car_ram/XST_GND" (ZERO) removed.
+Unused block "ram_ctrl/car_ram/XST_VCC" (ONE) removed.
 
 Optimized Block(s):
 TYPE 		BLOCK

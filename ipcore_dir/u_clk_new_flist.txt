@@ -1,2 +1,0 @@
-# Output products list for <u_clk_new>
-u_clk_new_flist.txt

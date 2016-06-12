@@ -53,8 +53,8 @@ end top_module;
 architecture Behavioral of top_module is
 --component
 	component ledcontroller is
-		 Port ( car_in : in  STD_LOGIC_VECTOR (23 downto 0);
-				  curr_address : in STD_LOGIC_VECTOR (7 downto 0);
+		 Port ( parkinglot : in  STD_LOGIC_VECTOR (23 downto 0);
+				  curr_address : in STD_LOGIC_VECTOR (4 downto 0);
 				  rst, ena, clk, status : in  STD_LOGIC;      
 				  led_out : out  STD_LOGIC_VECTOR (23 downto 0));	
 	end component;
@@ -116,25 +116,33 @@ architecture Behavioral of top_module is
       addra: in std_logic_vector(13 downto 0);
       douta: out std_logic_vector(7 downto 0));
    end component;
-
+	
+	component ram_controller is
+	    Port ( clk, rst : in  STD_LOGIC;
+			  real_clk : in STD_LOGIC_VECTOR (15 downto 0);
+           address : in  STD_LOGIC_VECTOR (4 downto 0);
+			  car_num : in STD_LOGIC_VECTOR (15 downto 0);
+           data_out : out  STD_LOGIC_VECTOR (31 downto 0);
+			  parkinglot : out STD_LOGIC_VECTOR (23 downto 0);
+           ac_show, ac_add, ac_rmv : in  STD_LOGIC);
+	end component;
 --end component
 
 --signals
 	signal rst_inv : STD_LOGIC;
 	signal status : STD_LOGIC;
-	signal car_in : STD_LOGIC_VECTOR (23 downto 0);
-	signal curr_address : STD_LOGIC_VECTOR (7 downto 0);
+	signal parkinglot : STD_LOGIC_VECTOR (23 downto 0);
+	signal curr_address : STD_LOGIC_VECTOR (4 downto 0);
 	signal freq : STD_LOGIC_VECTOR (2 downto 0);
 	signal minutes : STD_LOGIC_VECTOR (15 downto 0);
-	signal ac_add, ac_rmv : STD_LOGIC;
+	signal ac_add, ac_rmv, ac_show : STD_LOGIC;
 	signal car_num : STD_LOGIC_VECTOR (15 downto 0);
-	
+	signal car_data_out : STD_LOGIC_VECTOR (31 downto 0);
 	signal key_pad_out : STD_LOGIC_VECTOR (3 downto 0);
 	signal key_event : STD_LOGIC;
 	signal key_pad_clk : STD_LOGIC;
 	
 	--lcd-------------
-	signal RST_INV_LCD : STD_LOGIC;
 
    signal clk_25m : std_logic;
 	
@@ -145,13 +153,12 @@ architecture Behavioral of top_module is
 --end signals
 
 begin
-	
-	rst_inv <= not push_button(0);
+
 	status <= dip_switch(0);
 	freq <= dip_switch(7 downto 5);
 	
 	
-	led_ctrl : ledcontroller port map(car_in => car_in, curr_address => curr_address, rst => rst_inv, ena => '1', clk => clk, status => status, led_out => led_out);
+	led_ctrl : ledcontroller port map(parkinglot => parkinglot, curr_address => curr_address, rst => rst_inv, ena => '1', clk => clk, status => status, led_out => led_out);
 
 	gate_ctrl : gate_controller port map(clk => clk, 
 													 rst => rst_inv, 
@@ -173,7 +180,13 @@ begin
 	key_clk_dvd : seg_clk_divider port map(clk => clk, rst => rst_inv,
 														new_clk =>  key_pad_clk );
 													 
-													 
+	ram_ctrl : ram_controller port map(clk => clk, rst => rst_inv,
+												  real_clk => minutes,
+												  address => "00000",
+												  car_num => car_num,
+												  data_out => car_data_out,
+												  parkinglot => parkinglot,
+												  ac_show => ac_show, ac_add => ac_add, ac_rmv => ac_rmv);
 	---lcd----------------
 	u_lcd_clk : lcd_25m_clk port map(clk=>clk, 
 											 rst=>rst_inv,
@@ -198,9 +211,7 @@ begin
 												  de=>lcd_den);
 
    de<=lcd_den;
-   lcd_clk<=clk_25m;										 
-	----lcd----------------											 
-   RST_INV_LCD<= not RSTB;											 
-													 
+   lcd_clk<=clk_25m;										 							 
+	rst_inv <= not RSTB;									 
 end Behavioral;
 

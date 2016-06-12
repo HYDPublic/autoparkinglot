@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: top_module.prj
 
@@ -107,42 +107,55 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/hong/Documents/autoParking/dff.vhd" in Library work.
+Compiling vhdl file "C:/Users/minchul/Documents/autoparkinglot/dff.vhd" in Library work.
 Architecture behavioral of Entity dff is up to date.
-Compiling vhdl file "C:/Users/hong/Documents/autoParking/count_0to5.vhd" in Library work.
+Compiling vhdl file "C:/Users/minchul/Documents/autoparkinglot/counter_0_to_23.vhd" in Library work.
+Architecture behavioral of Entity counter_0_to_23 is up to date.
+Compiling vhdl file "C:/Users/minchul/Documents/autoparkinglot/count_0to5.vhd" in Library work.
 Architecture behavioral of Entity count_0to5 is up to date.
-Compiling vhdl file "C:/Users/hong/Documents/autoParking/reg.vhd" in Library work.
+Compiling vhdl file "C:/Users/minchul/Documents/autoparkinglot/reg.vhd" in Library work.
 Architecture behavioral of Entity reg is up to date.
-Compiling vhdl file "C:/Users/hong/Documents/autoParking/x4_clk_divider.vhd" in Library work.
+Compiling vhdl file "C:/Users/minchul/Documents/autoparkinglot/ipcore_dir/car_reg_ram.vhd" in Library work.
+Entity <car_reg_ram> compiled.
+Entity <car_reg_ram> (Architecture <car_reg_ram_a>) compiled.
+Compiling vhdl file "C:/Users/minchul/Documents/autoparkinglot/empty_address_finder.vhd" in Library work.
+Architecture behavioral of Entity empty_address_finder is up to date.
+Compiling vhdl file "C:/Users/minchul/Documents/autoparkinglot/x4_clk_divider.vhd" in Library work.
 Architecture behavioral of Entity x4_clk_divider is up to date.
-Compiling vhdl file "C:/Users/hong/Documents/autoParking/calculator.vhd" in Library work.
+Compiling vhdl file "C:/Users/minchul/Documents/autoparkinglot/calculator.vhd" in Library work.
 Architecture behavioral of Entity calculator is up to date.
-Compiling vhdl file "C:/Users/hong/Documents/autoParking/seg_clk_divider.vhd" in Library work.
+Compiling vhdl file "C:/Users/minchul/Documents/autoparkinglot/seg_clk_divider.vhd" in Library work.
 Architecture behavioral of Entity seg_clk_divider is up to date.
-Compiling vhdl file "C:/Users/hong/Documents/autoParking/shift_register_6bit.vhd" in Library work.
+Compiling vhdl file "C:/Users/minchul/Documents/autoparkinglot/shift_register_6bit.vhd" in Library work.
 Architecture behavioral of Entity shift_register_6bit is up to date.
-Compiling vhdl file "C:/Users/hong/Documents/autoParking/seg_controller.vhd" in Library work.
+Compiling vhdl file "C:/Users/minchul/Documents/autoparkinglot/seg_controller.vhd" in Library work.
 Architecture behavioral of Entity seg_controller is up to date.
-Compiling vhdl file "C:/Users/hong/Documents/autoParking/led_clock_divider.vhd" in Library work.
+Compiling vhdl file "C:/Users/minchul/Documents/autoparkinglot/led_clock_divider.vhd" in Library work.
 Architecture behavioral of Entity led_clock_divider is up to date.
-Compiling vhdl file "C:/Users/hong/Documents/autoParking/led_decoder.vhd" in Library work.
+Compiling vhdl file "C:/Users/minchul/Documents/autoparkinglot/led_decoder.vhd" in Library work.
 Architecture behavioral of Entity led_decoder is up to date.
-Compiling vhdl file "C:/Users/hong/Documents/autoParking/ledcontroller.vhd" in Library work.
+Compiling vhdl file "C:/Users/minchul/Documents/autoparkinglot/ledcontroller.vhd" in Library work.
 Architecture behavioral of Entity ledcontroller is up to date.
-Compiling vhdl file "C:/Users/hong/Documents/autoParking/gate_controller.vhd" in Library work.
+Compiling vhdl file "C:/Users/minchul/Documents/autoparkinglot/gate_controller.vhd" in Library work.
 Architecture behavioral of Entity gate_controller is up to date.
-Compiling vhdl file "C:/Users/hong/Documents/autoParking/keypad_controller.vhd" in Library work.
+Compiling vhdl file "C:/Users/minchul/Documents/autoparkinglot/keypad_controller.vhd" in Library work.
 Architecture behavioral of Entity keypad_controller is up to date.
-Compiling vhdl file "C:/Users/hong/Documents/autoParking/lcd_25m_clk.vhd" in Library work.
-Entity <lcd_25m_clk> compiled.
-Entity <lcd_25m_clk> (Architecture <behavioral>) compiled.
-Compiling vhdl file "C:/Users/hong/Documents/autoParking/digi_clk.vhd" in Library work.
+Compiling vhdl file "C:/Users/minchul/Documents/autoparkinglot/ram_controller.vhd" in Library work.
+Entity <ram_controller> compiled.
+Entity <ram_controller> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/minchul/Documents/autoparkinglot/lcd_25m_clk.vhd" in Library work.
+Architecture behavioral of Entity lcd_25m_clk is up to date.
+Compiling vhdl file "C:/Users/minchul/Documents/autoparkinglot/digi_clk.vhd" in Library work.
 Architecture behavioral of Entity digi_clk is up to date.
-Compiling vhdl file "C:/Users/hong/Documents/autoParking/ipcore_dir/NumsRom.vhd" in Library work.
+Compiling vhdl file "C:/Users/minchul/Documents/autoparkinglot/ipcore_dir/NumsRom.vhd" in Library work.
 Architecture numsrom_a of Entity numsrom is up to date.
-Compiling vhdl file "C:/Users/hong/Documents/autoParking/TFT_LCD_Image.vhd" in Library work.
+Compiling vhdl file "C:/Users/minchul/Documents/autoparkinglot/TFT_LCD_Image.vhd" in Library work.
 Architecture behavioral of Entity tft_lcd_image is up to date.
-Compiling vhdl file "C:/Users/hong/Documents/autoParking/top_module.vhd" in Library work.
+Compiling vhdl file "C:/Users/minchul/Documents/autoparkinglot/u_clk_new.vhd" in Library work.
+Architecture behavioral of Entity u_clk_new is up to date.
+Compiling vhdl file "C:/Users/minchul/Documents/autoparkinglot/clk_25m.vhd" in Library work.
+Architecture behavioral of Entity clk_25m is up to date.
+Compiling vhdl file "C:/Users/minchul/Documents/autoparkinglot/top_module.vhd" in Library work.
 Architecture behavioral of Entity top_module is up to date.
 
 =========================================================================
@@ -157,6 +170,8 @@ Analyzing hierarchy for entity <gate_controller> in library <work> (architecture
 Analyzing hierarchy for entity <keypad_controller> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <seg_clk_divider> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ram_controller> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <lcd_25m_clk> in library <work> (architecture <behavioral>).
 
@@ -176,9 +191,13 @@ Analyzing hierarchy for entity <seg_controller> in library <work> (architecture 
 
 Analyzing hierarchy for entity <x4_clk_divider> in library <work> (architecture <behavioral>).
 
+Analyzing hierarchy for entity <empty_address_finder> in library <work> (architecture <behavioral>).
+
 Analyzing hierarchy for entity <reg> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <count_0To5> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <counter_0_to_23> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <dff> in library <work> (architecture <behavioral>).
 
@@ -187,7 +206,7 @@ Analyzing hierarchy for entity <dff> in library <work> (architecture <behavioral
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <top_module> in library <work> (Architecture <behavioral>).
-WARNING:Xst:2211 - "C:/Users/hong/Documents/autoParking/top_module.vhd" line 187: Instantiating black box module <NumsRom>.
+WARNING:Xst:2211 - "C:/Users/minchul/Documents/autoparkinglot/top_module.vhd" line 199: Instantiating black box module <NumsRom>.
 Entity <top_module> analyzed. Unit <top_module> generated.
 
 Analyzing Entity <ledcontroller> in library <work> (Architecture <behavioral>).
@@ -229,6 +248,18 @@ Entity <x4_clk_divider> analyzed. Unit <x4_clk_divider> generated.
 Analyzing Entity <seg_clk_divider> in library <work> (Architecture <behavioral>).
 Entity <seg_clk_divider> analyzed. Unit <seg_clk_divider> generated.
 
+Analyzing Entity <ram_controller> in library <work> (Architecture <behavioral>).
+WARNING:Xst:2211 - "C:/Users/minchul/Documents/autoparkinglot/ram_controller.vhd" line 72: Instantiating black box module <car_reg_ram>.
+Entity <ram_controller> analyzed. Unit <ram_controller> generated.
+
+Analyzing Entity <empty_address_finder> in library <work> (Architecture <behavioral>).
+Entity <empty_address_finder> analyzed. Unit <empty_address_finder> generated.
+
+Analyzing Entity <counter_0_to_23> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "C:/Users/minchul/Documents/autoparkinglot/counter_0_to_23.vhd" line 40: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <rst>
+Entity <counter_0_to_23> analyzed. Unit <counter_0_to_23> generated.
+
 Analyzing Entity <lcd_25m_clk> in library <work> (Architecture <behavioral>).
 Entity <lcd_25m_clk> analyzed. Unit <lcd_25m_clk> generated.
 
@@ -246,7 +277,7 @@ Entity <TFT_LCD_image> analyzed. Unit <TFT_LCD_image> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <seg_clk_divider>.
-    Related source file is "C:/Users/hong/Documents/autoParking/seg_clk_divider.vhd".
+    Related source file is "C:/Users/minchul/Documents/autoparkinglot/seg_clk_divider.vhd".
     Found 1-bit register for signal <new_clk>.
     Found 16-bit up counter for signal <cnt_data>.
     Summary:
@@ -256,7 +287,7 @@ Unit <seg_clk_divider> synthesized.
 
 
 Synthesizing Unit <lcd_25m_clk>.
-    Related source file is "C:/Users/hong/Documents/autoParking/lcd_25m_clk.vhd".
+    Related source file is "C:/Users/minchul/Documents/autoparkinglot/lcd_25m_clk.vhd".
     Found 1-bit register for signal <dclk>.
     Found 4-bit up counter for signal <cnt_data>.
     Summary:
@@ -266,7 +297,7 @@ Unit <lcd_25m_clk> synthesized.
 
 
 Synthesizing Unit <digi_clk>.
-    Related source file is "C:/Users/hong/Documents/autoParking/digi_clk.vhd".
+    Related source file is "C:/Users/minchul/Documents/autoparkinglot/digi_clk.vhd".
     Found 1-bit register for signal <clk>.
     Found 32-bit up counter for signal <count>.
     Found 32-bit comparator greatequal for signal <count$cmp_ge0000> created at line 41.
@@ -286,10 +317,10 @@ Unit <digi_clk> synthesized.
 
 
 Synthesizing Unit <TFT_LCD_image>.
-    Related source file is "C:/Users/hong/Documents/autoParking/TFT_LCD_Image.vhd".
-WARNING:Xst:643 - "C:/Users/hong/Documents/autoParking/TFT_LCD_Image.vhd" line 173: The result of a 12x10-bit multiplication is partially used. Only the 14 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
-WARNING:Xst:643 - "C:/Users/hong/Documents/autoParking/TFT_LCD_Image.vhd" line 215: The result of a 12x10-bit multiplication is partially used. Only the 20 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
-WARNING:Xst:643 - "C:/Users/hong/Documents/autoParking/TFT_LCD_Image.vhd" line 258: The result of a 12x10-bit multiplication is partially used. Only the 20 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+    Related source file is "C:/Users/minchul/Documents/autoparkinglot/TFT_LCD_Image.vhd".
+WARNING:Xst:643 - "C:/Users/minchul/Documents/autoparkinglot/TFT_LCD_Image.vhd" line 173: The result of a 12x10-bit multiplication is partially used. Only the 14 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "C:/Users/minchul/Documents/autoparkinglot/TFT_LCD_Image.vhd" line 215: The result of a 12x10-bit multiplication is partially used. Only the 20 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "C:/Users/minchul/Documents/autoparkinglot/TFT_LCD_Image.vhd" line 258: The result of a 12x10-bit multiplication is partially used. Only the 20 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
     Found 14-bit register for signal <addrcnt>.
     Found 12-bit subtractor for signal <addrcnt$addsub0000> created at line 173.
     Found 12-bit subtractor for signal <addrcnt$addsub0001> created at line 215.
@@ -347,7 +378,7 @@ Unit <TFT_LCD_image> synthesized.
 
 
 Synthesizing Unit <led_clock_divider>.
-    Related source file is "C:/Users/hong/Documents/autoParking/led_clock_divider.vhd".
+    Related source file is "C:/Users/minchul/Documents/autoparkinglot/led_clock_divider.vhd".
     Found 1-bit register for signal <dclk>.
     Found 26-bit up counter for signal <cnt_data>.
     Summary:
@@ -357,15 +388,15 @@ Unit <led_clock_divider> synthesized.
 
 
 Synthesizing Unit <led_decoder>.
-    Related source file is "C:/Users/hong/Documents/autoParking/led_decoder.vhd".
-    Found 32x24-bit ROM for signal <output$mux0000>.
+    Related source file is "C:/Users/minchul/Documents/autoparkinglot/led_decoder.vhd".
+    Found 32x24-bit ROM for signal <output>.
     Summary:
 	inferred   1 ROM(s).
 Unit <led_decoder> synthesized.
 
 
 Synthesizing Unit <calculator>.
-    Related source file is "C:/Users/hong/Documents/autoParking/calculator.vhd".
+    Related source file is "C:/Users/minchul/Documents/autoparkinglot/calculator.vhd".
 WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 4-bit comparator lessequal for signal <number$cmp_le0000> created at line 48.
@@ -375,7 +406,7 @@ Unit <calculator> synthesized.
 
 
 Synthesizing Unit <dff>.
-    Related source file is "C:/Users/hong/Documents/autoParking/dff.vhd".
+    Related source file is "C:/Users/minchul/Documents/autoparkinglot/dff.vhd".
     Found 1-bit register for signal <data>.
     Summary:
 	inferred   1 D-type flip-flop(s).
@@ -383,7 +414,7 @@ Unit <dff> synthesized.
 
 
 Synthesizing Unit <count_0To5>.
-    Related source file is "C:/Users/hong/Documents/autoParking/count_0to5.vhd".
+    Related source file is "C:/Users/minchul/Documents/autoparkinglot/count_0to5.vhd".
     Found 3-bit up counter for signal <cnt_data>.
     Summary:
 	inferred   1 Counter(s).
@@ -391,7 +422,7 @@ Unit <count_0To5> synthesized.
 
 
 Synthesizing Unit <x4_clk_divider>.
-    Related source file is "C:/Users/hong/Documents/autoParking/x4_clk_divider.vhd".
+    Related source file is "C:/Users/minchul/Documents/autoparkinglot/x4_clk_divider.vhd".
     Found 2-bit up counter for signal <cnt_data>.
     Found 1-bit register for signal <d_clk>.
     Summary:
@@ -400,14 +431,22 @@ Synthesizing Unit <x4_clk_divider>.
 Unit <x4_clk_divider> synthesized.
 
 
+Synthesizing Unit <counter_0_to_23>.
+    Related source file is "C:/Users/minchul/Documents/autoparkinglot/counter_0_to_23.vhd".
+    Found 5-bit up counter for signal <data>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <counter_0_to_23> synthesized.
+
+
 Synthesizing Unit <ledcontroller>.
-    Related source file is "C:/Users/hong/Documents/autoParking/ledcontroller.vhd".
+    Related source file is "C:/Users/minchul/Documents/autoparkinglot/ledcontroller.vhd".
 WARNING:Xst:646 - Signal <curr_location_inv> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 Unit <ledcontroller> synthesized.
 
 
 Synthesizing Unit <keypad_controller>.
-    Related source file is "C:/Users/hong/Documents/autoParking/keypad_controller.vhd".
+    Related source file is "C:/Users/minchul/Documents/autoparkinglot/keypad_controller.vhd".
     Found 4-bit register for signal <key_data_int>.
     Found 4-bit register for signal <key_in_int>.
     Found 1-bit register for signal <key_temp0>.
@@ -421,7 +460,7 @@ Unit <keypad_controller> synthesized.
 
 
 Synthesizing Unit <seg_controller>.
-    Related source file is "C:/Users/hong/Documents/autoParking/seg_controller.vhd".
+    Related source file is "C:/Users/minchul/Documents/autoparkinglot/seg_controller.vhd".
     Found 16x8-bit ROM for signal <seg_int>.
     Found 6-bit register for signal <digit>.
     Summary:
@@ -430,37 +469,59 @@ Unit <seg_controller> synthesized.
 
 
 Synthesizing Unit <reg>.
-    Related source file is "C:/Users/hong/Documents/autoParking/reg.vhd".
+    Related source file is "C:/Users/minchul/Documents/autoparkinglot/reg.vhd".
 Unit <reg> synthesized.
 
 
+Synthesizing Unit <empty_address_finder>.
+    Related source file is "C:/Users/minchul/Documents/autoparkinglot/empty_address_finder.vhd".
+WARNING:Xst:737 - Found 5-bit latch for signal <addr_data>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 5-bit latch for signal <addr>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 32x24-bit ROM for signal <mask>.
+    Found 1-bit register for signal <parkinglot_change_event>.
+    Found 24-bit register for signal <parkinglot_data>.
+    Found 24-bit comparator not equal for signal <parkinglot_data$cmp_ne0000> created at line 64.
+    Summary:
+	inferred   1 ROM(s).
+	inferred  25 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <empty_address_finder> synthesized.
+
+
+Synthesizing Unit <ram_controller>.
+    Related source file is "C:/Users/minchul/Documents/autoparkinglot/ram_controller.vhd".
+WARNING:Xst:647 - Input <ac_rmv> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <real_clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <car_num> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <regi_data> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <parkinglot_data> is used but never assigned. This sourceless signal will be automatically connected to value 000000000000000000000000.
+WARNING:Xst:646 - Signal <find_empty_event> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <find_empty_ena> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:646 - Signal <find_empty_address> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <ram_controller> synthesized.
+
+
 Synthesizing Unit <shift_register_6bit>.
-    Related source file is "C:/Users/hong/Documents/autoParking/shift_register_6bit.vhd".
+    Related source file is "C:/Users/minchul/Documents/autoparkinglot/shift_register_6bit.vhd".
 WARNING:Xst:1780 - Signal <shift_reg5> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <shift_reg4> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 Unit <shift_register_6bit> synthesized.
 
 
 Synthesizing Unit <gate_controller>.
-    Related source file is "C:/Users/hong/Documents/autoParking/gate_controller.vhd".
-WARNING:Xst:1305 - Output <ac_rmv> is never assigned. Tied to value 0.
-WARNING:Xst:1305 - Output <car_num> is never assigned. Tied to value 0000000000000000.
-WARNING:Xst:1305 - Output <ac_add> is never assigned. Tied to value 0.
-WARNING:Xst:646 - Signal <remove_event> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <input_event> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Related source file is "C:/Users/minchul/Documents/autoparkinglot/gate_controller.vhd".
+WARNING:Xst:1780 - Signal <remove_event> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <input_event> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 Unit <gate_controller> synthesized.
 
 
 Synthesizing Unit <top_module>.
-    Related source file is "C:/Users/hong/Documents/autoParking/top_module.vhd".
+    Related source file is "C:/Users/minchul/Documents/autoparkinglot/top_module.vhd".
 WARNING:Xst:647 - Input <dip_switch<4:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <push_button<3:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:653 - Signal <curr_address> is used but never assigned. This sourceless signal will be automatically connected to value 00000000.
-WARNING:Xst:646 - Signal <car_num> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:653 - Signal <car_in> is used but never assigned. This sourceless signal will be automatically connected to value 000000000000000000000000.
-WARNING:Xst:646 - Signal <ac_rmv> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <ac_add> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <RST_INV_LCD> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:647 - Input <push_button> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <curr_address> is used but never assigned. This sourceless signal will be automatically connected to value 00000.
+WARNING:Xst:646 - Signal <car_data_out> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <ac_show> is used but never assigned. This sourceless signal will be automatically connected to value 0.
 Unit <top_module> synthesized.
 
 INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
@@ -469,9 +530,9 @@ INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmet
 HDL Synthesis Report
 
 Macro Statistics
-# ROMs                                                 : 2
+# ROMs                                                 : 3
  16x8-bit ROM                                          : 1
- 32x24-bit ROM                                         : 1
+ 32x24-bit ROM                                         : 2
 # Multipliers                                          : 7
  12x10-bit multiplier                                  : 3
  4x5-bit multiplier                                    : 4
@@ -479,7 +540,7 @@ Macro Statistics
  12-bit subtractor                                     : 3
  14-bit adder carry in                                 : 1
  32-bit adder                                          : 4
-# Counters                                             : 13
+# Counters                                             : 14
  11-bit up counter                                     : 1
  12-bit up counter                                     : 1
  16-bit up counter                                     : 2
@@ -488,16 +549,20 @@ Macro Statistics
  3-bit up counter                                      : 1
  32-bit up counter                                     : 4
  4-bit up counter                                      : 1
+ 5-bit up counter                                      : 1
  6-bit up counter                                      : 1
-# Registers                                            : 37
- 1-bit register                                        : 27
+# Registers                                            : 39
+ 1-bit register                                        : 28
  14-bit register                                       : 1
  16-bit register                                       : 1
+ 24-bit register                                       : 1
  32-bit register                                       : 1
  4-bit register                                        : 3
  5-bit register                                        : 2
  6-bit register                                        : 2
-# Comparators                                          : 30
+# Latches                                              : 2
+ 5-bit latch                                           : 2
+# Comparators                                          : 31
  12-bit comparator greatequal                          : 7
  12-bit comparator less                                : 6
  12-bit comparator lessequal                           : 1
@@ -505,6 +570,7 @@ Macro Statistics
  13-bit comparator greater                             : 2
  13-bit comparator less                                : 8
  13-bit comparator lessequal                           : 2
+ 24-bit comparator not equal                           : 1
  32-bit comparator greatequal                          : 1
  4-bit comparator lessequal                            : 1
 
@@ -515,7 +581,11 @@ Macro Statistics
 =========================================================================
 
 Reading core <ipcore_dir/NumsRom.ngc>.
+Reading core <ipcore_dir/car_reg_ram.ngc>.
 Loading core <NumsRom> for timing and area information for instance <u_image_rom>.
+Loading core <car_reg_ram> for timing and area information for instance <car_ram>.
+WARNING:Xst:1290 - Hierarchical block <empty_addr_finder> is unconnected in block <ram_ctrl>.
+   It will be removed from the design.
 WARNING:Xst:1290 - Hierarchical block <led_clk_div> is unconnected in block <led_ctrl>.
    It will be removed from the design.
 WARNING:Xst:1290 - Hierarchical block <led_dec> is unconnected in block <led_ctrl>.
@@ -535,9 +605,9 @@ WARNING:Xst:1710 - FF/Latch <rgb_data_12> (without init value) has a constant va
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# ROMs                                                 : 2
+# ROMs                                                 : 3
  16x8-bit ROM                                          : 1
- 32x24-bit ROM                                         : 1
+ 32x24-bit ROM                                         : 2
 # Multipliers                                          : 7
  12x10-bit multiplier                                  : 3
  4x5-bit multiplier                                    : 4
@@ -545,7 +615,7 @@ Macro Statistics
  12-bit subtractor                                     : 3
  14-bit adder carry in                                 : 1
  32-bit adder                                          : 4
-# Counters                                             : 13
+# Counters                                             : 14
  11-bit up counter                                     : 1
  12-bit up counter                                     : 1
  16-bit up counter                                     : 2
@@ -554,10 +624,13 @@ Macro Statistics
  3-bit up counter                                      : 1
  32-bit up counter                                     : 4
  4-bit up counter                                      : 1
+ 5-bit up counter                                      : 1
  6-bit up counter                                      : 1
-# Registers                                            : 123
- Flip-Flops                                            : 123
-# Comparators                                          : 30
+# Registers                                            : 148
+ Flip-Flops                                            : 148
+# Latches                                              : 2
+ 5-bit latch                                           : 2
+# Comparators                                          : 31
  12-bit comparator greatequal                          : 7
  12-bit comparator less                                : 6
  12-bit comparator lessequal                           : 1
@@ -565,6 +638,7 @@ Macro Statistics
  13-bit comparator greater                             : 2
  13-bit comparator less                                : 8
  13-bit comparator lessequal                           : 2
+ 24-bit comparator not equal                           : 1
  32-bit comparator greatequal                          : 1
  4-bit comparator lessequal                            : 1
 
@@ -589,15 +663,32 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rgb_data_12> (witho
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_data_0> (without init value) has a constant value of 0 in block <TFT_LCD_image>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_data_1> (without init value) has a constant value of 0 in block <TFT_LCD_image>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <r_data_2> (without init value) has a constant value of 0 in block <TFT_LCD_image>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1899 - Due to constant pushing, all outputs of the instance <led_dec> of the block <led_decoder> are unconnected in block <ledcontroller>.
-   This instance will be removed from the design along with all underlying logic
+INFO:Xst:2261 - The FF/Latch <parkinglot_data_0> in Unit <empty_address_finder> is equivalent to the following 23 FFs/Latches, which will be removed : <parkinglot_data_1> <parkinglot_data_2> <parkinglot_data_3> <parkinglot_data_4> <parkinglot_data_5> <parkinglot_data_6> <parkinglot_data_7> <parkinglot_data_8> <parkinglot_data_9> <parkinglot_data_10> <parkinglot_data_11> <parkinglot_data_12> <parkinglot_data_13> <parkinglot_data_14> <parkinglot_data_15> <parkinglot_data_16> <parkinglot_data_17> <parkinglot_data_18> <parkinglot_data_19> <parkinglot_data_20> <parkinglot_data_21> <parkinglot_data_22> <parkinglot_data_23> 
 WARNING:Xst:2677 - Node <led_clk_div/dclk> of sequential type is unconnected in block <ledcontroller>.
+WARNING:Xst:1710 - FF/Latch <parkinglot_data_0> (without init value) has a constant value of 0 in block <empty_address_finder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <conter/data_0> (without init value) has a constant value of 0 in block <empty_address_finder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <conter/data_1> (without init value) has a constant value of 0 in block <empty_address_finder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <conter/data_2> (without init value) has a constant value of 0 in block <empty_address_finder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <conter/data_3> (without init value) has a constant value of 0 in block <empty_address_finder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <conter/data_4> (without init value) has a constant value of 0 in block <empty_address_finder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_data_0> (without init value) has a constant value of 0 in block <empty_address_finder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_data_1> (without init value) has a constant value of 0 in block <empty_address_finder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_data_2> (without init value) has a constant value of 0 in block <empty_address_finder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_0> (without init value) has a constant value of 0 in block <empty_address_finder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_1> (without init value) has a constant value of 0 in block <empty_address_finder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_2> (without init value) has a constant value of 0 in block <empty_address_finder>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:1901 - Instance U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/s3_init.ram/dpram.dp2x2.ram in unit U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/s3_init.ram/dpram.dp2x2.ram of type RAMB16_S2_S2 has been replaced by RAMB16
 INFO:Xst:1901 - Instance U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/s3_init.ram/dpram.dp4x4.ram in unit U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/s3_init.ram/dpram.dp4x4.ram of type RAMB16_S4_S4 has been replaced by RAMB16
 INFO:Xst:1901 - Instance U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/s3_init.ram/dpram.dp2x2.ram in unit U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/s3_init.ram/dpram.dp2x2.ram of type RAMB16_S2_S2 has been replaced by RAMB16
 INFO:Xst:1901 - Instance U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/s3_init.ram/dpram.dp2x2.ram in unit U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/s3_init.ram/dpram.dp2x2.ram of type RAMB16_S2_S2 has been replaced by RAMB16
 INFO:Xst:1901 - Instance U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s3_init.ram/dpram.dp4x4.ram in unit U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s3_init.ram/dpram.dp4x4.ram of type RAMB16_S4_S4 has been replaced by RAMB16
 INFO:Xst:1901 - Instance U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp2x2.ram in unit U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp2x2.ram of type RAMB16_S2_S2 has been replaced by RAMB16
+INFO:Xst:1901 - Instance U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/spram.ram in unit U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/spram.ram of type RAMB16_S36_S36 has been replaced by RAMB16
+WARNING:Xst:2677 - Node <ram_ctrl/empty_addr_finder/addr_data_4> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <ram_ctrl/empty_addr_finder/addr_data_3> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <ram_ctrl/empty_addr_finder/addr_4> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <ram_ctrl/empty_addr_finder/addr_3> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <ram_ctrl/empty_addr_finder/parkinglot_change_event> of sequential type is unconnected in block <top_module>.
 
 Optimizing unit <top_module> ...
 
@@ -654,9 +745,9 @@ Design Statistics
 # IOs                              : 78
 
 Cell Usage :
-# BELS                             : 1671
-#      GND                         : 8
-#      INV                         : 31
+# BELS                             : 1673
+#      GND                         : 10
+#      INV                         : 30
 #      LUT1                        : 302
 #      LUT2                        : 150
 #      LUT2_D                      : 1
@@ -669,7 +760,7 @@ Cell Usage :
 #      LUT4_L                      : 32
 #      MUXCY                       : 380
 #      MUXF5                       : 29
-#      VCC                         : 2
+#      VCC                         : 3
 #      XORCY                       : 325
 # FlipFlops/Latches                : 311
 #      FDC                         : 65
@@ -679,13 +770,13 @@ Cell Usage :
 #      FDR                         : 37
 #      FDRE                        : 96
 #      FDS                         : 5
-# RAMS                             : 6
-#      RAMB16                      : 6
+# RAMS                             : 7
+#      RAMB16                      : 7
 # Clock Buffers                    : 3
 #      BUFG                        : 2
 #      BUFGP                       : 1
-# IO Buffers                       : 69
-#      IBUF                        : 9
+# IO Buffers                       : 68
+#      IBUF                        : 8
 #      OBUF                        : 60
 # MULTs                            : 3
 #      MULT18X18                   : 3
@@ -698,11 +789,11 @@ Selected Device : 3s2000fg456-5
 
  Number of Slices:                      491  out of  20480     2%  
  Number of Slice Flip Flops:            307  out of  40960     0%  
- Number of 4 input LUTs:                927  out of  40960     2%  
+ Number of 4 input LUTs:                926  out of  40960     2%  
  Number of IOs:                          78
- Number of bonded IOBs:                  70  out of    333    21%  
+ Number of bonded IOBs:                  69  out of    333    20%  
     IOB Flip Flops:                       4
- Number of BRAMs:                         6  out of     40    15%  
+ Number of BRAMs:                         7  out of     40    17%  
  Number of MULT18X18s:                    3  out of     40     7%  
  Number of GCLKs:                         3  out of      8    37%  
 
@@ -730,6 +821,7 @@ Clock Signal                                          | Clock buffer(FF name)   
 u_lcd_clk/dclk1                                       | BUFG                                                                                                                                                                                                                                           | 100   |
 u_image_rom/N1                                        | NONE(u_image_rom/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/s3_init.ram/dpram.dp2x2.ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/s3_init.ram/dpram.dp2x2.ram)| 6     |
 clk                                                   | BUFGP                                                                                                                                                                                                                                          | 39    |
+N0                                                    | NONE(ram_ctrl/car_ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/spram.ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/spram.ram)   | 1     |
 gate_ctrl/number_event(gate_ctrl/calc/number_event1:O)| NONE(*)(gate_ctrl/shift_reg/REG3/reg0[3].reg/data)                                                                                                                                                                                             | 16    |
 dig_clk/clk1                                          | BUFG                                                                                                                                                                                                                                           | 134   |
 key_clk_dvd/new_clk                                   | NONE(keypad_cntrller/x4_DVD/cnt_data_1)                                                                                                                                                                                                        | 7     |
@@ -743,13 +835,13 @@ INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered
 
 Asynchronous Control Signals Information:
 ----------------------------------------
---------------------------------------------------+----------------------------------------------------+-------+
-Control Signal                                    | Buffer(FF name)                                    | Load  |
---------------------------------------------------+----------------------------------------------------+-------+
-rst_inv(rst_inv1_INV_0:O)                         | NONE(gate_ctrl/seg_ctrller/Counter_0to5/cnt_data_0)| 63    |
-u_tft_lcd/RSTB_inv(u_tft_lcd/RSTB_inv1_INV_0:O)   | NONE(u_tft_lcd/addrcnt_0)                          | 51    |
-gate_ctrl/rst_shift_reg(gate_ctrl/rst_shift_reg:O)| NONE(gate_ctrl/shift_reg/REG0/reg0[0].reg/data)    | 16    |
---------------------------------------------------+----------------------------------------------------+-------+
+--------------------------------------------------+------------------------------------------------+-------+
+Control Signal                                    | Buffer(FF name)                                | Load  |
+--------------------------------------------------+------------------------------------------------+-------+
+RSTB                                              | IBUF                                           | 63    |
+u_tft_lcd/RSTB_inv(u_tft_lcd/RSTB_inv1_INV_0:O)   | NONE(u_tft_lcd/addrcnt_0)                      | 51    |
+gate_ctrl/rst_shift_reg(gate_ctrl/rst_shift_reg:O)| NONE(gate_ctrl/shift_reg/REG0/reg0[0].reg/data)| 16    |
+--------------------------------------------------+------------------------------------------------+-------+
 
 Timing Summary:
 ---------------
@@ -758,7 +850,7 @@ Speed Grade: -5
    Minimum period: 13.990ns (Maximum Frequency: 71.482MHz)
    Minimum input arrival time before clock: 7.350ns
    Maximum output required time after clock: 12.052ns
-   Maximum combinational path delay: 8.691ns
+   Maximum combinational path delay: 7.491ns
 
 Timing Detail:
 --------------
@@ -970,6 +1062,27 @@ Delay:               2.917ns (Levels of Logic = 1)
                                        (43.9% logic, 56.1% route)
 
 =========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'N0'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              3.014ns (Levels of Logic = 2)
+  Source:            RSTB (PAD)
+  Destination:       ram_ctrl/car_ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/spram.ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/spram.ram (RAM)
+  Destination Clock: N0 rising
+
+  Data Path: RSTB to ram_ctrl/car_ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/spram.ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/spram.ram
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            92   0.715   1.867  RSTB_IBUF (RSTB_IBUF)
+     begin scope: 'ram_ctrl/car_ram'
+     begin scope: 'U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/spram.ram'
+     RAMB16:SSRB               0.432          U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/spram.ram
+    ----------------------------------------
+    Total                      3.014ns (1.147ns logic, 1.867ns route)
+                                       (38.1% logic, 61.9% route)
+
+=========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'u_lcd_clk/dclk1'
   Total number of paths / destination ports: 2054 / 41
 -------------------------------------------------------------------------
@@ -1142,32 +1255,31 @@ Offset:              10.712ns (Levels of Logic = 5)
 Timing constraint: Default path analysis
   Total number of paths / destination ports: 24 / 24
 -------------------------------------------------------------------------
-Delay:               8.691ns (Levels of Logic = 3)
-  Source:            push_button<0> (PAD)
+Delay:               7.491ns (Levels of Logic = 2)
+  Source:            RSTB (PAD)
   Destination:       led_out<23> (PAD)
 
-  Data Path: push_button<0> to led_out<23>
+  Data Path: RSTB to led_out<23>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             2   0.715   0.745  push_button_0_IBUF (push_button_0_IBUF)
-     INV:I->O             87   0.479   1.843  rst_inv1_INV_0 (rst_inv)
+     IBUF:I->O            92   0.715   1.867  RSTB_IBUF (RSTB_IBUF)
      OBUF:I->O                 4.909          led_out_23_OBUF (led_out<23>)
     ----------------------------------------
-    Total                      8.691ns (6.103ns logic, 2.588ns route)
-                                       (70.2% logic, 29.8% route)
+    Total                      7.491ns (5.624ns logic, 1.867ns route)
+                                       (75.1% logic, 24.9% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 30.00 secs
-Total CPU time to Xst completion: 29.91 secs
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 14.56 secs
  
 --> 
 
-Total memory usage is 294768 kilobytes
+Total memory usage is 305920 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   51 (   0 filtered)
-Number of infos    :    9 (   0 filtered)
+Number of warnings :   74 (   0 filtered)
+Number of infos    :   11 (   0 filtered)
 

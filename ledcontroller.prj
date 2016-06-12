@@ -1,3 +1,5 @@
 vhdl work "led_decoder.vhd"
 vhdl work "led_clock_divider.vhd"
 vhdl work "ledcontroller.vhd"
+vhdl work "clk_25m.vhd"
+vhdl work "u_clk_new.vhd"

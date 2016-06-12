@@ -1,139 +1,25 @@
-V3 119
+V3 137
 FL C:/Users/hong/Documents/autoParking/calculator.vhd 2016/06/12.13:20:37 P.20131013
-EN work/calculator 1465710676 \
-      FL C:/Users/hong/Documents/autoParking/calculator.vhd \
-      PB ieee/std_logic_1164 1381692176
-AR work/calculator/Behavioral 1465710677 \
-      FL C:/Users/hong/Documents/autoParking/calculator.vhd EN work/calculator 1465710676
 FL C:/Users/hong/Documents/autoParking/clk_25m.vhd 2016/06/12.13:39:09 P.20131013
-EN work/clk_25m 1465708793 FL C:/Users/hong/Documents/autoParking/clk_25m.vhd \
-      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
-      PH unisim/VCOMPONENTS 1381692182
-AR work/clk_25m/BEHAVIORAL 1465708794 \
-      FL C:/Users/hong/Documents/autoParking/clk_25m.vhd EN work/clk_25m 1465708793 \
-      CP BUFG CP IBUFG CP DCM
 FL C:/Users/hong/Documents/autoParking/count_0to5.vhd 2016/06/11.22:47:41 P.20131013
-EN work/count_0to5 1465710670 \
-      FL C:/Users/hong/Documents/autoParking/count_0to5.vhd \
-      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/count_0to5/Behavioral 1465710671 \
-      FL C:/Users/hong/Documents/autoParking/count_0to5.vhd EN work/count_0to5 1465710670
 FL C:/Users/hong/Documents/autoParking/dff.vhd 2016/06/12.13:20:37 P.20131013
-EN work/dff 1465710668 FL C:/Users/hong/Documents/autoParking/dff.vhd \
-      PB ieee/std_logic_1164 1381692176
-AR work/dff/Behavioral 1465710669 \
-      FL C:/Users/hong/Documents/autoParking/dff.vhd EN work/dff 1465710668
 FL C:/Users/hong/Documents/autoParking/digi_clk.vhd 2016/06/11.15:46:47 P.20131013
-EN work/digi_clk 1465710696 FL C:/Users/hong/Documents/autoParking/digi_clk.vhd \
-      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
-      PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/digi_clk/Behavioral 1465710697 \
-      FL C:/Users/hong/Documents/autoParking/digi_clk.vhd EN work/digi_clk 1465710696
 FL C:/Users/hong/Documents/autoParking/digi_timer.vhd 2016/06/11.22:47:41 P.20131013
 FL C:/Users/hong/Documents/autoParking/gate_controller.vhd 2016/06/12.13:20:37 P.20131013
-EN work/gate_controller 1465710690 \
-      FL C:/Users/hong/Documents/autoParking/gate_controller.vhd \
-      PB ieee/std_logic_1164 1381692176
-AR work/gate_controller/Behavioral 1465710691 \
-      FL C:/Users/hong/Documents/autoParking/gate_controller.vhd \
-      EN work/gate_controller 1465710690 CP calculator CP seg_clk_divider \
-      CP shift_register_6bit CP seg_controller
 FL C:/Users/hong/Documents/autoParking/ipcore_dir/NumsRom.vhd 2016/06/11.14:43:30 P.20131013
-EN work/NumsRom 1465710698 \
-      FL C:/Users/hong/Documents/autoParking/ipcore_dir/NumsRom.vhd \
-      PB ieee/std_logic_1164 1381692176
-AR work/NumsRom/NumsRom_a 1465710699 \
-      FL C:/Users/hong/Documents/autoParking/ipcore_dir/NumsRom.vhd \
-      EN work/NumsRom 1465710698
 FL C:/Users/hong/Documents/autoParking/keypad_controller.vhd 2016/06/12.13:20:37 P.20131013
-EN work/keypad_controller 1465710692 \
-      FL C:/Users/hong/Documents/autoParking/keypad_controller.vhd \
-      PB ieee/std_logic_1164 1381692176
-AR work/keypad_controller/Behavioral 1465710693 \
-      FL C:/Users/hong/Documents/autoParking/keypad_controller.vhd \
-      EN work/keypad_controller 1465710692 CP x4_clk_divider
 FL C:/Users/hong/Documents/autoParking/lcd_25m_clk.vhd 2016/06/12.14:47:43 P.20131013
-EN work/lcd_25m_clk 1465710694 \
-      FL C:/Users/hong/Documents/autoParking/lcd_25m_clk.vhd \
-      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/lcd_25m_clk/Behavioral 1465710695 \
-      FL C:/Users/hong/Documents/autoParking/lcd_25m_clk.vhd EN work/lcd_25m_clk 1465710694
 FL C:/Users/hong/Documents/autoParking/ledcontroller.vhd 2016/06/12.13:20:37 P.20131013
-EN work/ledcontroller 1465710688 \
-      FL C:/Users/hong/Documents/autoParking/ledcontroller.vhd \
-      PB ieee/std_logic_1164 1381692176
-AR work/ledcontroller/Behavioral 1465710689 \
-      FL C:/Users/hong/Documents/autoParking/ledcontroller.vhd \
-      EN work/ledcontroller 1465710688 CP led_clock_divider CP led_decoder
 FL C:/Users/hong/Documents/autoParking/led_clock_divider.vhd 2016/06/11.22:47:41 P.20131013
-EN work/led_clock_divider 1465710684 \
-      FL C:/Users/hong/Documents/autoParking/led_clock_divider.vhd \
-      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/led_clock_divider/Behavioral 1465710685 \
-      FL C:/Users/hong/Documents/autoParking/led_clock_divider.vhd \
-      EN work/led_clock_divider 1465710684
 FL C:/Users/hong/Documents/autoParking/led_decoder.vhd 2016/06/11.22:47:41 P.20131013
-EN work/led_decoder 1465710686 \
-      FL C:/Users/hong/Documents/autoParking/led_decoder.vhd \
-      PB ieee/std_logic_1164 1381692176
-AR work/led_decoder/Behavioral 1465710687 \
-      FL C:/Users/hong/Documents/autoParking/led_decoder.vhd EN work/led_decoder 1465710686
 FL C:/Users/hong/Documents/autoParking/reg.vhd 2016/06/11.22:47:41 P.20131013
-EN work/reg 1465710672 FL C:/Users/hong/Documents/autoParking/reg.vhd \
-      PB ieee/std_logic_1164 1381692176
-AR work/reg/Behavioral 1465710673 \
-      FL C:/Users/hong/Documents/autoParking/reg.vhd EN work/reg 1465710672 CP dff
 FL C:/Users/hong/Documents/autoParking/seg_clk_divider.vhd 2016/06/11.22:47:41 P.20131013
-EN work/seg_clk_divider 1465710678 \
-      FL C:/Users/hong/Documents/autoParking/seg_clk_divider.vhd \
-      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/seg_clk_divider/Behavioral 1465710679 \
-      FL C:/Users/hong/Documents/autoParking/seg_clk_divider.vhd \
-      EN work/seg_clk_divider 1465710678
 FL C:/Users/hong/Documents/autoParking/seg_controller.vhd 2016/06/11.22:47:41 P.20131013
-EN work/seg_controller 1465710682 \
-      FL C:/Users/hong/Documents/autoParking/seg_controller.vhd \
-      PB ieee/std_logic_1164 1381692176
-AR work/seg_controller/Behavioral 1465710683 \
-      FL C:/Users/hong/Documents/autoParking/seg_controller.vhd \
-      EN work/seg_controller 1465710682 CP count_0To5
 FL C:/Users/hong/Documents/autoParking/shift_register_6bit.vhd 2016/06/11.22:47:41 P.20131013
-EN work/shift_register_6bit 1465710680 \
-      FL C:/Users/hong/Documents/autoParking/shift_register_6bit.vhd \
-      PB ieee/std_logic_1164 1381692176
-AR work/shift_register_6bit/Behavioral 1465710681 \
-      FL C:/Users/hong/Documents/autoParking/shift_register_6bit.vhd \
-      EN work/shift_register_6bit 1465710680 CP reg
 FL C:/Users/hong/Documents/autoParking/TFT_LCD_Image.vhd 2016/06/11.19:25:56 P.20131013
-EN work/TFT_LCD_Image 1465710700 \
-      FL C:/Users/hong/Documents/autoParking/TFT_LCD_Image.vhd \
-      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
-      PB ieee/NUMERIC_STD 1381692181 PB ieee/std_logic_arith 1381692177
-AR work/TFT_LCD_Image/Behavioral 1465710701 \
-      FL C:/Users/hong/Documents/autoParking/TFT_LCD_Image.vhd \
-      EN work/TFT_LCD_Image 1465710700
 FL C:/Users/hong/Documents/autoParking/top_module.vhd 2016/06/12.14:42:23 P.20131013
-EN work/top_module 1465710702 \
-      FL C:/Users/hong/Documents/autoParking/top_module.vhd \
-      PB ieee/std_logic_1164 1381692176
-AR work/top_module/Behavioral 1465710703 \
-      FL C:/Users/hong/Documents/autoParking/top_module.vhd EN work/top_module 1465710702 \
-      CP ledcontroller CP gate_controller CP keypad_controller CP seg_clk_divider \
-      CP lcd_25m_clk CP digi_clk CP NumsRom CP TFT_LCD_image
 FL C:/Users/hong/Documents/autoParking/u_clk_new.vhd 2016/06/12.14:06:19 P.20131013
-EN work/u_clk_new 1465708114 FL C:/Users/hong/Documents/autoParking/u_clk_new.vhd \
-      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
-      PH unisim/VCOMPONENTS 1381692182
-AR work/u_clk_new/BEHAVIORAL 1465708115 \
-      FL C:/Users/hong/Documents/autoParking/u_clk_new.vhd EN work/u_clk_new 1465708114 \
-      CP BUFG CP IBUFG CP DCM
 FL C:/Users/hong/Documents/autoParking/x4_clk_divider.vhd 2016/06/11.22:47:41 P.20131013
-EN work/x4_clk_divider 1465710674 \
-      FL C:/Users/hong/Documents/autoParking/x4_clk_divider.vhd \
-      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/x4_clk_divider/Behavioral 1465710675 \
-      FL C:/Users/hong/Documents/autoParking/x4_clk_divider.vhd \
-      EN work/x4_clk_divider 1465710674
 FL C:/Users/minchul/Documents/autoparkinglot/btn_clock_divider.vhd 2016/06/11.19:33:05 P.20131013
 EN work/btn_clock_divider 1465647253 \
       FL C:/Users/minchul/Documents/autoparkinglot/btn_clock_divider.vhd \
@@ -142,31 +28,144 @@ AR work/btn_clock_divider/Behavioral 1465647254 \
       FL C:/Users/minchul/Documents/autoparkinglot/btn_clock_divider.vhd \
       EN work/btn_clock_divider 1465647253
 FL C:/Users/minchul/Documents/autoparkinglot/calculator.vhd 2016/06/12.12:56:54 P.20131013
-FL C:/Users/minchul/Documents/autoparkinglot/counter_0_to_23.vhd 2016/06/11.16:19:58 P.20131013
-EN work/counter_0_to_23 1465634966 \
+EN work/calculator 1465712691 \
+      FL C:/Users/minchul/Documents/autoparkinglot/calculator.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/calculator/Behavioral 1465712692 \
+      FL C:/Users/minchul/Documents/autoparkinglot/calculator.vhd \
+      EN work/calculator 1465712691
+FL C:/Users/minchul/Documents/autoparkinglot/clk_25m.vhd 2016/06/12.14:56:42 P.20131013
+EN work/clk_25m 1465712721 \
+      FL C:/Users/minchul/Documents/autoparkinglot/clk_25m.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/clk_25m/BEHAVIORAL 1465712722 \
+      FL C:/Users/minchul/Documents/autoparkinglot/clk_25m.vhd EN work/clk_25m 1465712721 \
+      CP BUFG CP IBUFG CP DCM
+FL C:/Users/minchul/Documents/autoparkinglot/counter_0_to_23.vhd 2016/06/11.22:56:44 P.20131013
+EN work/counter_0_to_23 1465712679 \
       FL C:/Users/minchul/Documents/autoparkinglot/counter_0_to_23.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/counter_0_to_23/Behavioral 1465634967 \
+AR work/counter_0_to_23/Behavioral 1465712680 \
       FL C:/Users/minchul/Documents/autoparkinglot/counter_0_to_23.vhd \
-      EN work/counter_0_to_23 1465634966
+      EN work/counter_0_to_23 1465712679
 FL C:/Users/minchul/Documents/autoparkinglot/count_0to5.vhd 2016/05/09.22:42:54 P.20131013
+EN work/count_0to5 1465712681 \
+      FL C:/Users/minchul/Documents/autoparkinglot/count_0to5.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/count_0to5/Behavioral 1465712682 \
+      FL C:/Users/minchul/Documents/autoparkinglot/count_0to5.vhd \
+      EN work/count_0to5 1465712681
 FL C:/Users/minchul/Documents/autoparkinglot/dff.vhd 2016/05/09.22:42:56 P.20131013
+EN work/dff 1465712677 FL C:/Users/minchul/Documents/autoparkinglot/dff.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/dff/Behavioral 1465712678 \
+      FL C:/Users/minchul/Documents/autoparkinglot/dff.vhd EN work/dff 1465712677
+FL C:/Users/minchul/Documents/autoparkinglot/digi_clk.vhd 2016/06/12.14:56:42 P.20131013
+EN work/digi_clk 1465712713 \
+      FL C:/Users/minchul/Documents/autoparkinglot/digi_clk.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/digi_clk/Behavioral 1465712714 \
+      FL C:/Users/minchul/Documents/autoparkinglot/digi_clk.vhd EN work/digi_clk 1465712713
 FL C:/Users/minchul/Documents/autoparkinglot/digi_timer.vhd 2016/06/02.21:42:02 P.20131013
-FL C:/Users/minchul/Documents/autoparkinglot/empty_address_finder.vhd 2016/06/11.17:38:58 P.20131013
-EN work/empty_address_finder 1465634353 \
+FL C:/Users/minchul/Documents/autoparkinglot/empty_address_finder.vhd 2016/06/12.15:06:45 P.20131013
+EN work/empty_address_finder 1465712687 \
       FL C:/Users/minchul/Documents/autoparkinglot/empty_address_finder.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/empty_address_finder/Behavioral 1465634354 \
+AR work/empty_address_finder/Behavioral 1465712688 \
       FL C:/Users/minchul/Documents/autoparkinglot/empty_address_finder.vhd \
-      EN work/empty_address_finder 1465634353 CP counter_0_to_23
-FL C:/Users/minchul/Documents/autoparkinglot/gate_controller.vhd 2016/06/12.13:11:59 P.20131013
+      EN work/empty_address_finder 1465712687 CP counter_0_to_23
+FL C:/Users/minchul/Documents/autoparkinglot/gate_controller.vhd 2016/06/12.14:57:53 P.20131013
+EN work/gate_controller 1465712705 \
+      FL C:/Users/minchul/Documents/autoparkinglot/gate_controller.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/gate_controller/Behavioral 1465712706 \
+      FL C:/Users/minchul/Documents/autoparkinglot/gate_controller.vhd \
+      EN work/gate_controller 1465712705 CP calculator CP seg_clk_divider \
+      CP shift_register_6bit CP seg_controller
+FL C:/Users/minchul/Documents/autoparkinglot/ipcore_dir/car_reg_ram.vhd 2016/06/12.15:22:36 P.20131013
+EN work/car_reg_ram 1465712685 \
+      FL C:/Users/minchul/Documents/autoparkinglot/ipcore_dir/car_reg_ram.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/car_reg_ram/car_reg_ram_a 1465712686 \
+      FL C:/Users/minchul/Documents/autoparkinglot/ipcore_dir/car_reg_ram.vhd \
+      EN work/car_reg_ram 1465712685
+FL C:/Users/minchul/Documents/autoparkinglot/ipcore_dir/NumsRom.vhd 2016/06/12.14:56:42 P.20131013
+EN work/NumsRom 1465712715 \
+      FL C:/Users/minchul/Documents/autoparkinglot/ipcore_dir/NumsRom.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/NumsRom/NumsRom_a 1465712716 \
+      FL C:/Users/minchul/Documents/autoparkinglot/ipcore_dir/NumsRom.vhd \
+      EN work/NumsRom 1465712715
+FL C:/Users/minchul/Documents/autoparkinglot/ipcore_dir/ram.vhd 2016/06/12.15:17:31 P.20131013
+EN work/ram 1465712267 \
+      FL C:/Users/minchul/Documents/autoparkinglot/ipcore_dir/ram.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/ram/ram_a 1465712268 \
+      FL C:/Users/minchul/Documents/autoparkinglot/ipcore_dir/ram.vhd EN work/ram 1465712267
 FL C:/Users/minchul/Documents/autoparkinglot/keypad_controller.vhd 2016/06/12.13:10:49 P.20131013
-FL C:/Users/minchul/Documents/autoparkinglot/ledcontroller.vhd 2016/06/12.12:08:06 P.20131013
+EN work/keypad_controller 1465712707 \
+      FL C:/Users/minchul/Documents/autoparkinglot/keypad_controller.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/keypad_controller/Behavioral 1465712708 \
+      FL C:/Users/minchul/Documents/autoparkinglot/keypad_controller.vhd \
+      EN work/keypad_controller 1465712707 CP x4_clk_divider
+FL C:/Users/minchul/Documents/autoparkinglot/lcd_25m_clk.vhd 2016/06/12.14:56:43 P.20131013
+EN work/lcd_25m_clk 1465712711 \
+      FL C:/Users/minchul/Documents/autoparkinglot/lcd_25m_clk.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/lcd_25m_clk/Behavioral 1465712712 \
+      FL C:/Users/minchul/Documents/autoparkinglot/lcd_25m_clk.vhd \
+      EN work/lcd_25m_clk 1465712711
+FL C:/Users/minchul/Documents/autoparkinglot/ledcontroller.vhd 2016/06/12.15:12:12 P.20131013
+EN work/ledcontroller 1465712703 \
+      FL C:/Users/minchul/Documents/autoparkinglot/ledcontroller.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/ledcontroller/Behavioral 1465712704 \
+      FL C:/Users/minchul/Documents/autoparkinglot/ledcontroller.vhd \
+      EN work/ledcontroller 1465712703 CP led_clock_divider CP led_decoder
 FL C:/Users/minchul/Documents/autoparkinglot/led_clock_divider.vhd 2016/06/02.21:42:02 P.20131013
-FL C:/Users/minchul/Documents/autoparkinglot/led_decoder.vhd 2016/06/02.21:42:02 P.20131013
+EN work/led_clock_divider 1465712699 \
+      FL C:/Users/minchul/Documents/autoparkinglot/led_clock_divider.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/led_clock_divider/Behavioral 1465712700 \
+      FL C:/Users/minchul/Documents/autoparkinglot/led_clock_divider.vhd \
+      EN work/led_clock_divider 1465712699
+FL C:/Users/minchul/Documents/autoparkinglot/led_decoder.vhd 2016/06/12.15:11:47 P.20131013
+EN work/led_decoder 1465712701 \
+      FL C:/Users/minchul/Documents/autoparkinglot/led_decoder.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/led_decoder/Behavioral 1465712702 \
+      FL C:/Users/minchul/Documents/autoparkinglot/led_decoder.vhd \
+      EN work/led_decoder 1465712701
+FL C:/Users/minchul/Documents/autoparkinglot/ram_controller.vhd 2016/06/12.15:23:02 P.20131013
+EN work/ram_controller 1465712709 \
+      FL C:/Users/minchul/Documents/autoparkinglot/ram_controller.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/ram_controller/Behavioral 1465712710 \
+      FL C:/Users/minchul/Documents/autoparkinglot/ram_controller.vhd \
+      EN work/ram_controller 1465712709 CP car_reg_ram CP empty_address_finder
 FL C:/Users/minchul/Documents/autoparkinglot/reg.vhd 2016/05/09.22:42:56 P.20131013
+EN work/reg 1465712683 FL C:/Users/minchul/Documents/autoparkinglot/reg.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/reg/Behavioral 1465712684 \
+      FL C:/Users/minchul/Documents/autoparkinglot/reg.vhd EN work/reg 1465712683 \
+      CP dff
 FL C:/Users/minchul/Documents/autoparkinglot/seg_clk_divider.vhd 2016/05/09.22:42:56 P.20131013
+EN work/seg_clk_divider 1465712693 \
+      FL C:/Users/minchul/Documents/autoparkinglot/seg_clk_divider.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/seg_clk_divider/Behavioral 1465712694 \
+      FL C:/Users/minchul/Documents/autoparkinglot/seg_clk_divider.vhd \
+      EN work/seg_clk_divider 1465712693
 FL C:/Users/minchul/Documents/autoparkinglot/seg_controller.vhd 2016/05/25.19:22:36 P.20131013
+EN work/seg_controller 1465712697 \
+      FL C:/Users/minchul/Documents/autoparkinglot/seg_controller.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/seg_controller/Behavioral 1465712698 \
+      FL C:/Users/minchul/Documents/autoparkinglot/seg_controller.vhd \
+      EN work/seg_controller 1465712697 CP count_0To5
 FL C:/Users/minchul/Documents/autoparkinglot/select_car_controller.vhd 2016/06/11.21:13:31 P.20131013
 EN work/select_car_controller 1465647257 \
       FL C:/Users/minchul/Documents/autoparkinglot/select_car_controller.vhd \
@@ -175,15 +174,48 @@ AR work/select_car_controller/Behavioral 1465647258 \
       FL C:/Users/minchul/Documents/autoparkinglot/select_car_controller.vhd \
       EN work/select_car_controller 1465647257 CP btn_clock_divider CP dff
 FL C:/Users/minchul/Documents/autoparkinglot/shift_register_6bit.vhd 2016/05/25.18:16:40 P.20131013
-FL C:/Users/minchul/Documents/autoparkinglot/top_module.vhd 2016/06/12.13:15:14 P.20131013
+EN work/shift_register_6bit 1465712695 \
+      FL C:/Users/minchul/Documents/autoparkinglot/shift_register_6bit.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/shift_register_6bit/Behavioral 1465712696 \
+      FL C:/Users/minchul/Documents/autoparkinglot/shift_register_6bit.vhd \
+      EN work/shift_register_6bit 1465712695 CP reg
+FL C:/Users/minchul/Documents/autoparkinglot/TFT_LCD_Image.vhd 2016/06/12.14:56:42 P.20131013
+EN work/TFT_LCD_Image 1465712717 \
+      FL C:/Users/minchul/Documents/autoparkinglot/TFT_LCD_Image.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB ieee/NUMERIC_STD 1381692181 PB ieee/std_logic_arith 1381692177
+AR work/TFT_LCD_Image/Behavioral 1465712718 \
+      FL C:/Users/minchul/Documents/autoparkinglot/TFT_LCD_Image.vhd \
+      EN work/TFT_LCD_Image 1465712717
+FL C:/Users/minchul/Documents/autoparkinglot/top_module.vhd 2016/06/12.15:14:38 P.20131013
+EN work/top_module 1465712723 \
+      FL C:/Users/minchul/Documents/autoparkinglot/top_module.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/top_module/Behavioral 1465712724 \
+      FL C:/Users/minchul/Documents/autoparkinglot/top_module.vhd \
+      EN work/top_module 1465712723 CP ledcontroller CP gate_controller \
+      CP keypad_controller CP seg_clk_divider CP ram_controller CP lcd_25m_clk \
+      CP digi_clk CP NumsRom CP TFT_LCD_image
+FL C:/Users/minchul/Documents/autoparkinglot/u_clk_new.vhd 2016/06/12.14:56:43 P.20131013
+EN work/u_clk_new 1465712719 \
+      FL C:/Users/minchul/Documents/autoparkinglot/u_clk_new.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/u_clk_new/BEHAVIORAL 1465712720 \
+      FL C:/Users/minchul/Documents/autoparkinglot/u_clk_new.vhd \
+      EN work/u_clk_new 1465712719 CP BUFG CP IBUFG CP DCM
 FL C:/Users/minchul/Documents/autoparkinglot/x4_clk_divider.vhd 2016/05/09.22:43:16 P.20131013
+EN work/x4_clk_divider 1465712689 \
+      FL C:/Users/minchul/Documents/autoparkinglot/x4_clk_divider.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/x4_clk_divider/Behavioral 1465712690 \
+      FL C:/Users/minchul/Documents/autoparkinglot/x4_clk_divider.vhd \
+      EN work/x4_clk_divider 1465712689
 FL D:/autoparkinglot/digi_timer.vhd 2016/05/31.18:37:19 P.20131013
 FL D:/autoparkinglot/ledcontroller.vhd 2016/05/31.18:24:33 P.20131013
 FL D:/autoparkinglot/led_clock_divider.vhd 2016/05/11.03:15:14 P.20131013
 FL D:/autoparkinglot/led_decoder.vhd 2016/05/31.18:24:08 P.20131013
 FL D:/autoparkinglot/ram.vhd 2016/05/31.19:26:17 P.20131013
-EN work/ram 1464690383 FL D:/autoparkinglot/ram.vhd PB ieee/std_logic_1164 1381692176 \
-      PB ieee/NUMERIC_STD 1381692181
-AR work/ram/Behavioral 1464690384 \
-      FL D:/autoparkinglot/ram.vhd EN work/ram 1464690383
+AR work/ram/Behavioral -1 FL D:/autoparkinglot/ram.vhd EN work/ram 1465712267
 FL D:/autoparkinglot/top_module.vhd 2016/05/31.18:17:15 P.20131013

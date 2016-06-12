@@ -98,7 +98,7 @@ begin
 
 	
 	rst_shift_reg <= rst or clear_event;
-	
+	car_num <= seginput(3) & seginput(2) & seginput(1) & seginput(0);
 	calc : calculator port map(clk => clk, 
 										key_event => key_event,
 									   rst => rst, 
@@ -106,8 +106,8 @@ begin
 										output=>number_out, 
 										clear_event => clear_event, 
 										number_event => number_event,
-										input_event => input_event, 
-										remove_event => remove_event);
+										input_event => ac_add, 
+										remove_event => ac_rmv);
 	
 	
 	seg_dvd : seg_clk_divider port map ( clk => clk, rst => rst,

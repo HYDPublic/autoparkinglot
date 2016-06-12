@@ -31,7 +31,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity empty_address_finder is
     Port ( clk, rst, ena : in STD_LOGIC;
-			  car_storage : in  STD_LOGIC_VECTOR (23 downto 0);
+			  parkinglot : in  STD_LOGIC_VECTOR (23 downto 0);
 			  find_event : out STD_LOGIC;
            address : out  STD_LOGIC_VECTOR (4 downto 0));
 end empty_address_finder;
@@ -44,11 +44,11 @@ end component;
 signal cnt : STD_LOGIC_VECTOR (4 downto 0);
 signal mask : STD_LOGIC_VECTOR (23 downto 0);
 signal addr_data, addr : STD_LOGIC_VECTOR (4 downto 0);
-signal car_storage_data : STD_LOGIC_VECTOR (23 downto 0);
-signal car_storage_change_event : STD_LOGIC;
+signal parkinglot_data : STD_LOGIC_VECTOR (23 downto 0);
+signal parkinglot_change_event : STD_LOGIC;
 signal cnt_rst : STD_LOGIC;
 begin
-	cnt_rst <= rst or car_storage_change_event;
+	cnt_rst <= rst or parkinglot_change_event;
 	process (cnt)
 	begin
 		if cnt = "10111" then
@@ -58,15 +58,15 @@ begin
 		end if;
 	end process;
 	
-	process (clk, car_storage)
+	process (clk, parkinglot)
 	begin
 		if rising_edge(clk) then
-			if car_storage /= car_storage_data then
-				car_storage_data <= car_storage;
-				car_storage_change_event <= '1';
+			if parkinglot /= parkinglot_data then
+				parkinglot_data <= parkinglot;
+				parkinglot_change_event <= '1';
 			else
-				car_storage_data <= car_storage_Data;
-				car_storage_change_event <= '0';
+				parkinglot_data <= parkinglot_Data;
+				parkinglot_change_event <= '0';
 			end if;
 		end if;
 	end process;
@@ -74,10 +74,10 @@ begin
 	
 	
 	addr_data <= "11000" when (rst = '1') else 
-					 cnt when (mask and car_storage) = x"000000" else 
+					 cnt when (mask and parkinglot) = x"000000" else 
 					 addr_data;
 					 
-	addr <= "11000" when rst = '1' or (car_storage_change_event = '1')  else
+	addr <= "11000" when rst = '1' or (parkinglot_change_event = '1')  else
 			  addr_data when addr="11000" else
 			  addr;
 			  

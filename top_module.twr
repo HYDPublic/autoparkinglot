@@ -45,7 +45,7 @@ Clock clk to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-lcd_clk     |    9.161(R)|clk_BUFGP         |   0.000|
+lcd_clk     |    8.594(R)|clk_BUFGP         |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
@@ -53,41 +53,41 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    4.699|         |         |         |
+clk            |    4.802|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Pad to Pad
 ---------------+---------------+---------+
 Source Pad     |Destination Pad|  Delay  |
 ---------------+---------------+---------+
-push_button<0> |led_out<0>     |    8.502|
-push_button<0> |led_out<1>     |    9.006|
-push_button<0> |led_out<2>     |    8.498|
-push_button<0> |led_out<3>     |    9.347|
-push_button<0> |led_out<4>     |    8.504|
-push_button<0> |led_out<5>     |    8.797|
-push_button<0> |led_out<6>     |    8.795|
-push_button<0> |led_out<7>     |    8.802|
-push_button<0> |led_out<8>     |   15.872|
-push_button<0> |led_out<9>     |   12.938|
-push_button<0> |led_out<10>    |   12.351|
-push_button<0> |led_out<11>    |   14.471|
-push_button<0> |led_out<12>    |   15.726|
-push_button<0> |led_out<13>    |   16.357|
-push_button<0> |led_out<14>    |   16.665|
-push_button<0> |led_out<15>    |   16.666|
-push_button<0> |led_out<16>    |    9.355|
-push_button<0> |led_out<17>    |    8.943|
-push_button<0> |led_out<18>    |    9.355|
-push_button<0> |led_out<19>    |    8.947|
-push_button<0> |led_out<20>    |    8.839|
-push_button<0> |led_out<21>    |    9.139|
-push_button<0> |led_out<22>    |    6.055|
-push_button<0> |led_out<23>    |    9.023|
+RSTB           |led_out<0>     |   11.919|
+RSTB           |led_out<1>     |   12.235|
+RSTB           |led_out<2>     |   11.929|
+RSTB           |led_out<3>     |   12.513|
+RSTB           |led_out<4>     |   11.876|
+RSTB           |led_out<5>     |   12.172|
+RSTB           |led_out<6>     |   12.169|
+RSTB           |led_out<7>     |   12.176|
+RSTB           |led_out<8>     |   13.093|
+RSTB           |led_out<9>     |   10.900|
+RSTB           |led_out<10>    |   10.947|
+RSTB           |led_out<11>    |    6.252|
+RSTB           |led_out<12>    |    5.480|
+RSTB           |led_out<13>    |    5.826|
+RSTB           |led_out<14>    |    6.134|
+RSTB           |led_out<15>    |    6.134|
+RSTB           |led_out<16>    |   12.161|
+RSTB           |led_out<17>    |   11.864|
+RSTB           |led_out<18>    |   12.150|
+RSTB           |led_out<19>    |   11.859|
+RSTB           |led_out<20>    |   10.973|
+RSTB           |led_out<21>    |   11.281|
+RSTB           |led_out<22>    |   13.938|
+RSTB           |led_out<23>    |   12.464|
 ---------------+---------------+---------+
 
 
-Analysis completed Sun Jun 12 14:52:30 2016 
+Analysis completed Sun Jun 12 15:26:35 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:

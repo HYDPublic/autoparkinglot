@@ -30,8 +30,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity ledcontroller is
-    Port ( car_in : in  STD_LOGIC_VECTOR (23 downto 0);
-			  curr_address : in STD_LOGIC_VECTOR (7 downto 0);
+    Port ( parkinglot : in  STD_LOGIC_VECTOR (23 downto 0);
+			  curr_address : in STD_LOGIC_VECTOR (4 downto 0);
 			  rst, ena, clk, status : in  STD_LOGIC;      
            led_out : out  STD_LOGIC_VECTOR (23 downto 0));
 end ledcontroller;
@@ -43,11 +43,11 @@ component led_clock_divider is
 			dclk : out std_logic);
 end component;
 component led_decoder is
-     Port ( input : in  STD_LOGIC_VECTOR (7 downto 0);
+     Port ( input : in  STD_LOGIC_VECTOR (4 downto 0);
            output : out  STD_LOGIC_VECTOR (23 downto 0));
 end component;
 
-signal car_input : STD_LOGIC_VECTOR (23 downto 0);
+signal parkinglot_data : STD_LOGIC_VECTOR (23 downto 0);
 signal curr_location : STD_LOGIC_VECTOR (23 downto 0);
 signal div_clock : STD_LOGIC;
 --for test
@@ -57,31 +57,31 @@ begin
 	
 	led_dec : led_decoder port map(input => curr_address, output => curr_location);
 	
-	process (ena, rst, car_in, status, div_clock, curr_location)
+	process (ena, rst, parkinglot, status, div_clock, curr_location)
 	variable curr_location_inv : STD_LOGIC_VECTOR (23 downto 0);
 	begin
 		if ena = '1' then
 			if rst = '1' then
-				car_input <= x"ffffff";
+				parkinglot_data <= x"ffffff";
 			else
 				if status = '1' then
-					car_input <= car_in;
+					parkinglot_data <= parkinglot;
 				else
 					if div_clock = '1' then
-						car_input <= car_in;
+						parkinglot_data <= parkinglot;
 					else
 						curr_location_inv := not curr_location;
-						car_input <= (car_in and curr_location_inv);
+						parkinglot_data <= (parkinglot and curr_location_inv);
 					end if;
 				end if;
 			end if;
 		else
-			car_input <= (others => '0');
+			parkinglot_data <= (others => '0');
 		end if;
 	
 	end process;
 	
-	led_out <= car_input;
+	led_out <= parkinglot_data;
 
 end Behavioral;
 

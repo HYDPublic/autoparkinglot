@@ -34,14 +34,13 @@ entity ram_controller is
 			  real_clk : in STD_LOGIC_VECTOR (15 downto 0);
            address : in  STD_LOGIC_VECTOR (4 downto 0);
 			  car_num : in STD_LOGIC_VECTOR (15 downto 0);
-			  data_in : in  STD_LOGIC_VECTOR (31 downto 0);
            data_out : out  STD_LOGIC_VECTOR (31 downto 0);
-			  car_out : out STD_LOGIC_VECTOR (23 downto 0);
-           ac_show, ac_add, ac_remove : in  STD_LOGIC);
+			  parkinglot : out STD_LOGIC_VECTOR (23 downto 0);
+           ac_show, ac_add, ac_rmv : in  STD_LOGIC);
 end ram_controller;
 
 architecture Behavioral of ram_controller is
-	component ram is
+	component car_reg_ram is
 	  PORT (
 		 clka : IN STD_LOGIC;
 		 rsta : IN STD_LOGIC;
@@ -53,40 +52,41 @@ architecture Behavioral of ram_controller is
 	end component;
 	component empty_address_finder is
     Port ( clk, rst, ena : in STD_LOGIC;
-			  car_storage : in  STD_LOGIC_VECTOR (23 downto 0);
+			  parkinglot : in  STD_LOGIC_VECTOR (23 downto 0);
 			  find_event : out STD_LOGIC;
            address : out  STD_LOGIC_VECTOR (4 downto 0));	
 	end component;
 	signal regi_data : STD_LOGIC_VECTOR (31 downto 0);
-	signal ram_wea : STD_LOGIC;
+	signal ram_wea : STD_LOGIC_VECTOR (0 downto 0);
 	signal ram_clk : STD_LOGIC;
-	signal car_storage : STD_LOGIC_VECTOR (23 downto 0);
+	signal parkinglot_data : STD_LOGIC_VECTOR (23 downto 0);
 	signal find_empty_event : STD_LOGIC;
 	signal find_empty_address : STD_LOGIC_VECTOR (4 downto 0);
 	signal find_empty_ena : STD_LOGIC;
+	signal rst_inv : STD_LOGIC;
 begin
 	
-	
+	rst_inv <= not rst;
 	ram_clk <= ac_show and ac_add;
-	ram_wea <= '0' when ac_show = '1' else '1';
+	ram_wea <= "0" when ac_show = '1' else "1";
 	
-	car_ram : ram port map (clka => ram_clk,
-									rsta => rst,
+	car_ram : car_reg_ram port map (clka => ram_clk,
+									rsta => rst_inv,
 									wea => ram_wea,
 									addra => address,
-									dina => data_in,
+									dina => x"00000000",
 									douta => data_out);
 									
 	empty_addr_finder : empty_address_finder port map (clk => clk, 
 															  rst => rst, 
 															  ena => find_empty_ena, 
-															  car_storage => car_storage, 
+															  parkinglot => parkinglot_data, 
 															  find_event => find_empty_event, 
 															  address => find_empty_address);
 	
-	process(find_evnet)
+	process(find_empty_event)
 	begin
-		if rising_edge(find_event) then
+		if rising_edge(find_empty_event) then
 			
 			--wea = 1
 			--clk = 1
@@ -96,7 +96,7 @@ begin
 		end if;
 	end process;
 	
-	car_out <= car_storage;
+	parkinglot <= parkinglot_data;
 	
 	
 end Behavioral;

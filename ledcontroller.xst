@@ -1,5 +1,5 @@
-set -tmpdir "D:/autoparkinglot/xst/projnav.tmp"
-set -xsthdpdir "D:/autoparkinglot/xst"
+set -tmpdir "C:/Users/minchul/Documents/autoparkinglot/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/minchul/Documents/autoparkinglot/xst"
 elaborate
 -ifn ledcontroller.prj
 -ifmt mixed
