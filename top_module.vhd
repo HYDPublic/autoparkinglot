@@ -44,6 +44,7 @@ entity top_module is
 			  --for dip_switch
            dip_switch : in  STD_LOGIC_VECTOR (7 downto 0);
 			  --for display
+			  RSTB : in  STD_LOGIC;
            de : out  STD_LOGIC;
            lcd_clk : out  STD_LOGIC;
            data_out : out  STD_LOGIC_VECTOR (15 downto 0));
@@ -57,12 +58,6 @@ architecture Behavioral of top_module is
 				  rst, ena, clk, status : in  STD_LOGIC;      
 				  led_out : out  STD_LOGIC_VECTOR (23 downto 0));	
 	end component;
-	component digi_clk is
-		port (clk1 : in std_logic;
-   			freq : in std_logic_vector (2 downto 0);
-		   	minutes : out std_logic_vector(7 downto 0));
-	end component;
-
 	
 	component gate_controller is
 	    Port ( clk, rst : in  STD_LOGIC;
@@ -85,32 +80,79 @@ architecture Behavioral of top_module is
 				key_event : out STD_LOGIC
 				);
 	end component;
+	
+	component lcd_25m_clk is
+		port( clk, rst : in std_logic;
+				dclk : out std_logic);
+	end component;
+
 	component seg_clk_divider is
 		 Port ( clk, rst : in  STD_LOGIC;
 				  new_clk : out  STD_LOGIC
 				 );
 	end component;
+---lcd component---
+	component TFT_LCD_image is
+      port(CLK : in  STD_LOGIC;
+           RSTB : in  STD_LOGIC;
+           data_in : in  STD_LOGIC_VECTOR (7 downto 0);
+			  current_time : in STD_LOGIC_VECTOR (15 downto 0);
+			  info_car : in STD_LOGIC_VECTOR (31 downto 0);
+           data_addr : out  STD_LOGIC_VECTOR (13 downto 0);
+           data_out : out  STD_LOGIC_VECTOR (15 downto 0);
+           de : out  STD_LOGIC
+      );
+   end component;
+   
+	component digi_clk is
+		port (clk1 : in std_logic;
+   			freq : in std_logic_vector (2 downto 0);
+		   	minstd : out std_logic_vector(15 downto 0));
+	end component;
+	
+	component NumsRom is
+      port (
+      clka: in std_logic;
+      addra: in std_logic_vector(13 downto 0);
+      douta: out std_logic_vector(7 downto 0));
+   end component;
 
 --end component
+
+--signals
 	signal rst_inv : STD_LOGIC;
 	signal status : STD_LOGIC;
 	signal car_in : STD_LOGIC_VECTOR (23 downto 0);
 	signal curr_address : STD_LOGIC_VECTOR (7 downto 0);
 	signal freq : STD_LOGIC_VECTOR (2 downto 0);
-	signal minutes : STD_LOGIC_VECTOR (7 downto 0);
+	signal minutes : STD_LOGIC_VECTOR (15 downto 0);
 	signal ac_add, ac_rmv : STD_LOGIC;
 	signal car_num : STD_LOGIC_VECTOR (15 downto 0);
 	
 	signal key_pad_out : STD_LOGIC_VECTOR (3 downto 0);
 	signal key_event : STD_LOGIC;
 	signal key_pad_clk : STD_LOGIC;
+	
+	--lcd-------------
+	signal RST_INV_LCD : STD_LOGIC;
+
+   signal clk_25m : std_logic;
+	
+   signal imagedata : std_logic_vector (7 downto 0);
+   signal data_addr : std_logic_vector(13 downto 0);
+   signal lcd_den : std_logic;
+	--end lcd-----------	
+--end signals
+
 begin
+	
 	rst_inv <= not push_button(0);
 	status <= dip_switch(0);
 	freq <= dip_switch(7 downto 5);
 	
+	
 	led_ctrl : ledcontroller port map(car_in => car_in, curr_address => curr_address, rst => rst_inv, ena => '1', clk => clk, status => status, led_out => led_out);
-	dig_clk : digi_clk port map(clk1 => clk, freq => freq, minutes => minutes);
+
 	gate_ctrl : gate_controller port map(clk => clk, 
 													 rst => rst_inv, 
 													 digit => dig, 
@@ -121,14 +163,44 @@ begin
 													 ac_rmv => ac_rmv, 
 													 car_num => car_num);
 
-	keypad_cntrller : keypad_controller port map ( reset=>rst_inv,
-																  clk=>key_pad_clk,
-																  key_in=>key_in,
-																  key_scan=>key_scan,
-																  key_data=>key_pad_out,
-																  key_event=>key_event);
+	keypad_cntrller : keypad_controller port map(reset=>rst_inv,
+																clk=>key_pad_clk,
+																key_in=>key_in,
+																key_scan=>key_scan,
+																key_data=>key_pad_out,
+																key_event=>key_event);
 																  
-	key_clk_dvd : seg_clk_divider port map ( clk => clk, rst => rst_inv,
-													 new_clk =>  key_pad_clk );
+	key_clk_dvd : seg_clk_divider port map(clk => clk, rst => rst_inv,
+														new_clk =>  key_pad_clk );
+													 
+													 
+	---lcd----------------
+	u_lcd_clk : lcd_25m_clk port map(clk=>clk, 
+											 rst=>rst_inv,
+											 dclk=>clk_25m);
+	
+	dig_clk : digi_clk port map(clk1=>clk_25m,
+										 freq => freq, 
+										 minstd => minutes);
+		
+		
+   u_image_rom : NumsRom port map(clka => clk_25m,
+											  addra => data_addr,
+											  douta => imagedata);
+										  
+	u_tft_lcd : TFT_LCD_image port map(CLK =>clk_25m,
+												  current_time => minutes,
+												  info_car => "00010001000001110010000010000100",
+												  RSTB => RSTB,
+												  data_in => imagedata,
+												  data_addr => data_addr,
+												  data_out=>data_out,
+												  de=>lcd_den);
+
+   de<=lcd_den;
+   lcd_clk<=clk_25m;										 
+	----lcd----------------											 
+   RST_INV_LCD<= not RSTB;											 
+													 
 end Behavioral;
 

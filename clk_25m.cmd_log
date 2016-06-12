@@ -1,0 +1,2 @@
+xaw2spl {-intstyle ise} C:/Users/hong/Documents/autoParking/ipcore_dir/clk_25m.xaw 
+spl2sym -intstyle ise -family spartan3 clk_25m.spl C:/Users/hong/Documents/autoParking/clk_25m.sym 

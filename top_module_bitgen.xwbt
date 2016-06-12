@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=C:\Users\minchul\Documents\autoparkinglot\top_module.ncd
-OUTFILE=C:\Users\minchul\Documents\autoparkinglot\top_module.bit
+INFILE=C:\Users\hong\Documents\autoParking\top_module.ncd
+OUTFILE=C:\Users\hong\Documents\autoParking\top_module.bit
 FAMILY=Spartan3
 PART=xc3s2000-5fg456
-WORKINGDIR=C:\Users\minchul\Documents\autoparkinglot
+WORKINGDIR=C:\Users\hong\Documents\autoParking
 LICENSE=ISE
 USER_INFO=210866203_174146296_210576362_369

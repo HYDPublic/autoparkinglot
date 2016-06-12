@@ -1,5 +1,7 @@
 net clk loc = ab12;     
 
+net rstb     loc = u14;
+NET "RSTB" CLOCK_DEDICATED_ROUTE = FALSE; 
 
 //for push_button
 net push_button<0> loc = h5;
@@ -70,27 +72,27 @@ net led_out<23> loc = L2;
 
 
 // for display
-//NET lcd_clk     	LOC = V16;
-//NET de    		LOC = U16;
+NET lcd_clk     	LOC = V16;
+NET de    		LOC = U16;
  
 // Blue
-//net data_out<15> loc = W14;
-//net data_out<14> loc = AB13;
-//net data_out<13> loc = V18;
-//net data_out<12> loc = Y16;
-//net data_out<11> loc = AA20;
+net data_out<15> loc = W14;
+net data_out<14> loc = AB13;
+net data_out<13> loc = V18;
+net data_out<12> loc = Y16;
+net data_out<11> loc = AA20;
 
 // Green
-//net data_out<10> loc = AB20;
-//net data_out<9> loc = AA19;
-//net data_out<8> loc = AB19;
-//net data_out<7> loc = W18;
-//net data_out<6> loc = Y18;
-//net data_out<5> loc = AA18;
+net data_out<10> loc = AB20;
+net data_out<9> loc = AA19;
+net data_out<8> loc = AB19;
+net data_out<7> loc = W18;
+net data_out<6> loc = Y18;
+net data_out<5> loc = AA18;
 
 // Red
-//net data_out<4> loc = AB18;
-//net data_out<3> loc = V17;
-//net data_out<2> loc = W17;
-//net data_out<1> loc = Y17;
-//net data_out<0> loc = AA17;
+net data_out<4> loc = AB18;
+net data_out<3> loc = V17;
+net data_out<2> loc = W17;
+net data_out<1> loc = Y17;
+net data_out<0> loc = AA17;

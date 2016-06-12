@@ -9,36 +9,38 @@ Target Device  : xc3s2000
 Target Package : fg456
 Target Speed   : -5
 Mapper Version : spartan3 -- $Revision: 1.55 $
-Mapped Date    : Sun Jun 12 13:15:32 2016
+Mapped Date    : Sun Jun 12 14:51:47 2016
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:    1
+Number of warnings:    2
 Logic Utilization:
-  Number of Slice Flip Flops:            74 out of  40,960    1%
-  Number of 4 input LUTs:               130 out of  40,960    1%
+  Number of Slice Flip Flops:           307 out of  40,960    1%
+  Number of 4 input LUTs:               620 out of  40,960    1%
 Logic Distribution:
-  Number of occupied Slices:            103 out of  20,480    1%
-    Number of Slices containing only related logic:     103 out of     103 100%
-    Number of Slices containing unrelated logic:          0 out of     103   0%
+  Number of occupied Slices:            504 out of  20,480    2%
+    Number of Slices containing only related logic:     504 out of     504 100%
+    Number of Slices containing unrelated logic:          0 out of     504   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:         160 out of  40,960    1%
-    Number used as logic:               130
-    Number used as a route-thru:         30
+  Total Number of 4 input LUTs:         923 out of  40,960    2%
+    Number used as logic:               620
+    Number used as a route-thru:        303
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
-  Number of bonded IOBs:                 59 out of     333   17%
+  Number of bonded IOBs:                 78 out of     333   23%
     IOB Flip Flops:                       4
-  Number of BUFGMUXs:                     1 out of       8   12%
+  Number of RAMB16s:                      6 out of      40   15%
+  Number of MULT18X18s:                   3 out of      40    7%
+  Number of BUFGMUXs:                     3 out of       8   37%
 
-Average Fanout of Non-Clock Nets:                2.87
+Average Fanout of Non-Clock Nets:                2.82
 
-Peak Memory Usage:  285 MB
-Total REAL time to MAP completion:  15 secs 
-Total CPU time to MAP completion:   1 secs 
+Peak Memory Usage:  294 MB
+Total REAL time to MAP completion:  4 secs 
+Total CPU time to MAP completion:   4 secs 
 
 NOTES:
 
@@ -85,6 +87,9 @@ WARNING:Security:44 - Since no license file was found,
 WARNING:Security:42 - Your software subscription period has lapsed. Your current
 version of Xilinx tools will continue to function, but you no longer qualify for
 Xilinx software updates or new releases.
+WARNING:Pack:266 - The function generator u_tft_lcd/addrcnt_cmp_eq0005 failed to
+   merge with F5 multiplexer u_tft_lcd/addrcnt_mux0023<5>116.  There is a
+   conflict for the FXMUX.  The design will exhibit suboptimal timing.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net gate_ctrl/number_event is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
@@ -95,14 +100,14 @@ INFO:Security:50 - The XILINXD_LICENSE_FILE environment variable is set to
 '2100@203.252.164.184'.
 INFO:Security:53 - The LM_LICENSE_FILE environment variable is not set.
 INFO:Security:56 - Part 'xc3s2000' is not a WebPack part.
-INFO:LIT:243 - Logical network de has no load.
-INFO:LIT:395 - The above info message is repeated 28 more times for the
-   following (max. 5 shown):
-   lcd_clk,
-   data_out<15>,
-   data_out<14>,
-   data_out<13>,
-   data_out<12>
+INFO:LIT:243 - Logical network dip_switch<4>_IBUF has no load.
+INFO:LIT:395 - The above info message is repeated 7 more times for the following
+   (max. 5 shown):
+   dip_switch<3>_IBUF,
+   dip_switch<2>_IBUF,
+   dip_switch<1>_IBUF,
+   dip_switch<0>_IBUF,
+   push_button<3>_IBUF
    To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
@@ -111,15 +116,30 @@ INFO:LIT:244 - All of the single ended outputs in this design are using slew
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-   2 block(s) optimized away
+   4 block(s) optimized away
+   1 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "u_image_rom/N0" is sourceless and has been removed.
 
 Optimized Block(s):
 TYPE 		BLOCK
 GND 		XST_GND
 VCC 		XST_VCC
+GND 		u_image_rom/XST_GND
+VCC 		u_image_rom/XST_VCC
 
 To enable printing of redundant blocks removed and signals merged, set the
 detailed map report option and rerun map.
@@ -131,7 +151,25 @@ Section 6 - IOB Properties
 | IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
 |                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| RSTB                               | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | clk                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| data_out<0>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| data_out<1>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| data_out<2>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| data_out<3>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| data_out<4>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| data_out<5>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| data_out<6>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| data_out<7>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| data_out<8>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| data_out<9>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| data_out<10>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| data_out<11>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| data_out<12>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| data_out<13>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| data_out<14>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| data_out<15>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| de                                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | dig<0>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | dig<1>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | dig<2>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
@@ -154,6 +192,7 @@ Section 6 - IOB Properties
 | key_scan<1>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | key_scan<2>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | key_scan<3>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| lcd_clk                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | led_out<0>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | led_out<1>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | led_out<2>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
