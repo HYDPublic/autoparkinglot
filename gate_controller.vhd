@@ -33,40 +33,33 @@ entity gate_controller is
     Port ( clk, rst : in  STD_LOGIC;
            digit : out  STD_LOGIC_VECTOR (5 downto 0);
            segment : out  STD_LOGIC_VECTOR (7 downto 0);
-           key_scan : out  STD_LOGIC_VECTOR (3 downto 0);
-           key_in : in  STD_LOGIC_VECTOR (3 downto 0);
+           key_data : in  STD_LOGIC_VECTOR (3 downto 0);
+           key_event : in  STD_LOGIC;
            ac_add : out  STD_LOGIC;
            ac_rmv : out  STD_LOGIC;
            car_num : out  STD_LOGIC_VECTOR (15 downto 0));
 end gate_controller;
 
 architecture Behavioral of gate_controller is
---component
-	component keypad_controller is
-	    Port ( clk : in  STD_LOGIC;
-           reset : in  STD_LOGIC;
-           key_in : in  STD_LOGIC_VECTOR (3 downto 0);
-			  
-           key_scan : out  STD_LOGIC_VECTOR (3 downto 0);
-           key_data : out  STD_LOGIC_VECTOR (3 downto 0);
-			  key_event : out STD_LOGIC);
-	end component;
-	component seg_controller is
-		port ( clk, rst : in STD_LOGIC;
+
+component seg_clk_divider is
+    Port ( clk, rst : in  STD_LOGIC;
+           new_clk : out  STD_LOGIC
+			 );
+end component;
+
+component seg_controller is
+	port ( clk, rst : in STD_LOGIC;
 			 SEG_INPUT1, SEG_INPUT2, SEG_INPUT3,
 			 SEG_INPUT4, SEG_INPUT5, SEG_INPUT6 : in STD_LOGIC_VECTOR(3 downto 0);
 			 
 			 segment : out STD_LOGIC_VECTOR(7 downto 0);
 			 dig : out STD_LOGIC_VECTOR(5 downto 0)
 			);
-	end component;
-	component seg_clk_divider is
-	    Port ( clk, rst : in  STD_LOGIC;
-           new_clk : out  STD_LOGIC
-			 );
-	end component;
-	component shift_register_6bit is
-	    Port ( clk : in  STD_LOGIC;
+end component;
+
+component shift_register_6bit is
+    Port ( clk : in  STD_LOGIC;
            reset : in  STD_LOGIC;
            input : in  STD_LOGIC_VECTOR (3 downto 0);
 			  
@@ -77,76 +70,64 @@ architecture Behavioral of gate_controller is
            shreg4 : out  STD_LOGIC_VECTOR (3 downto 0);
            shreg5 : out  STD_LOGIC_VECTOR (3 downto 0)
 	 );
-	end component;
---end component
+end component;
+
+component calculator is
+    Port ( rst : in  STD_LOGIC;
+           clk, key_event : in  STD_LOGIC;
+           input : in  STD_LOGIC_VECTOR (3 downto 0);
+           output : out  STD_LOGIC_VECTOR (3 downto 0);
+			  clear_event, input_event, remove_event, number_event : out STD_LOGIC);
+end component;
+
+-- end components
+
 -- start signals
 type seg_in is array  (0 to 5) of STD_LOGIC_VECTOR(3 downto 0);
 signal seginput : seg_in;
 
-signal rst_inv : STD_LOGIC;
 signal seg_clk : STD_LOGIC;
 
-type keydata is array (0 to 5) of STD_LOGIC_VECTOR(3 downto 0);
-
-signal input_data : keydata;
-
-signal key_pad_out : STD_LOGIC_VECTOR (3 downto 0);
 signal number_out : STD_LOGIC_VECTOR (3 downto 0);
-signal key_event, clear_event, add_event, input_event : STD_LOGIC;
-signal rst_shift_reg, rst_input_reg : STD_LOGIC;
-signal equal : STD_LOGIC;
+signal clear_event, input_event, remove_event, number_event : STD_LOGIC;
+signal rst_shift_reg : STD_LOGIC;
 
 -- end signals
 
 begin
 
 	
+	rst_shift_reg <= rst or clear_event;
 	
-	seg_dvd : seg_clk_divider port map ( clk => clk, rst => rst_inv,
+	calc : calculator port map(clk => clk, 
+										key_event => key_event,
+									   rst => rst, 
+										input => key_data, 
+										output=>number_out, 
+										clear_event => clear_event, 
+										number_event => number_event,
+										input_event => input_event, 
+										remove_event => remove_event);
+	
+	
+	seg_dvd : seg_clk_divider port map ( clk => clk, rst => rst,
 													 new_clk =>  seg_clk );
 													 
-	keypad_cntrller : keypad_controller port map ( reset=>rst_inv,
-																  clk=>seg_clk,
-																  key_in=>key_in,
-																  key_scan=>key_scan,
-																  key_data=>key_pad_out,
-																  key_event=>key_event);
-	rst_shift_reg <= rst_inv or event_clear;
-
-	is_number <= '1' when key_pad_out >= x"0" and key_pad_out <= x"9" else '0';
-	event_number <= key_event and is_number;
-	
-	is_clear <= '1' when key_pad_out = x"C" else '0';
-	event_clear <= key_event and is_clear;
-	
-	is_add <= '1' when key_pad_out = x"A" else '0';
-	event_add <= key_event and is_add;
-	
-	is_remove <= '1' when key_pad_out = x"B" else '0';
-	event_remove <= key_event and is_remove;
-	
-	shift_reg : shift_register_6bit port map ( clk=>event_number, reset=>rst_shift_reg,
-															 input=>key_pad_out,
-															 shreg0=>input_data(0),
-															 shreg1=>input_data(1),
-															 shreg2=>input_data(2),
-															 shreg3=>input_data(3),
-															 shreg4=>input_data(4),
-															 shreg5=>input_data(5));
+ 
+	shift_reg : shift_register_6bit port map ( clk=>number_event, reset=>rst_shift_reg,
+															 input=>number_out,
+															 shreg0=>seginput(0),
+															 shreg1=>seginput(1),
+															 shreg2=>seginput(2),
+															 shreg3=>seginput(3),
+															 shreg4=>seginput(4),
+															 shreg5=>seginput(5));
 															 
-
-	seginput(0) <= input_data(0);
-	seginput(1) <= input_data(1);
-	seginput(2) <= input_data(2);
-	seginput(3) <= input_data(3);
-	seginput(4) <= input_data(4);
-	seginput(5) <= input_data(5);
 	
-	seg_ctrller : seg_controller port map ( clk => seg_clk, rst => rst_inv,
+	seg_ctrller : seg_controller port map ( clk => seg_clk, rst => rst,
 														 SEG_INPUT1 => seginput(0), SEG_INPUT2 => seginput(1), SEG_INPUT3 => seginput(2),
 														 SEG_INPUT4 => seginput(3), SEG_INPUT5 => seginput(4), SEG_INPUT6 => seginput(5),
 			 
-														 segment => segment, dig => dig);
-
+														 segment => segment, dig => digit);
 end Behavioral;
 

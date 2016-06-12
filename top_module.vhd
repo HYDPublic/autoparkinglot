@@ -62,22 +62,35 @@ architecture Behavioral of top_module is
    			freq : in std_logic_vector (2 downto 0);
 		   	minutes : out std_logic_vector(7 downto 0));
 	end component;
-	component ram is
-		Port ( clk, we, rst: in  STD_LOGIC;
-			 address : in STD_LOGIC_VECTOR (7 downto 0);
-			 data_in : in STD_LOGIC_VECTOR (27 downto 0);
-			 data_out : out STD_LOGIC_VECTOR (27 downto 0));
-	end component;
+
+	
 	component gate_controller is
 	    Port ( clk, rst : in  STD_LOGIC;
            digit : out  STD_LOGIC_VECTOR (5 downto 0);
            segment : out  STD_LOGIC_VECTOR (7 downto 0);
-           key_scan : out  STD_LOGIC_VECTOR (3 downto 0);
-           key_in : in  STD_LOGIC_VECTOR (3 downto 0);
+           key_data : in  STD_LOGIC_VECTOR (3 downto 0);
+           key_event : in  STD_LOGIC;
            ac_add : out  STD_LOGIC;
            ac_rmv : out  STD_LOGIC;
            car_num : out  STD_LOGIC_VECTOR (15 downto 0));
 	end component;
+	
+	component keypad_controller is
+		port( reset : in STD_LOGIC;
+				clk : in STD_LOGIC;
+				key_in : in STD_LOGIC_VECTOR (3 downto 0);
+					
+				key_scan : out STD_LOGIC_VECTOR (3 downto 0);
+				key_data : out STD_LOGIC_VECTOR (3 downto 0);
+				key_event : out STD_LOGIC
+				);
+	end component;
+	component seg_clk_divider is
+		 Port ( clk, rst : in  STD_LOGIC;
+				  new_clk : out  STD_LOGIC
+				 );
+	end component;
+
 --end component
 	signal rst_inv : STD_LOGIC;
 	signal status : STD_LOGIC;
@@ -87,6 +100,10 @@ architecture Behavioral of top_module is
 	signal minutes : STD_LOGIC_VECTOR (7 downto 0);
 	signal ac_add, ac_rmv : STD_LOGIC;
 	signal car_num : STD_LOGIC_VECTOR (15 downto 0);
+	
+	signal key_pad_out : STD_LOGIC_VECTOR (3 downto 0);
+	signal key_event : STD_LOGIC;
+	signal key_pad_clk : STD_LOGIC;
 begin
 	rst_inv <= not push_button(0);
 	status <= dip_switch(0);
@@ -98,12 +115,20 @@ begin
 													 rst => rst_inv, 
 													 digit => dig, 
 													 segment => segment, 
-													 key_scan => key_scan, 
-													 key_in => key_in, 
+													 key_data => key_pad_out,
+													 key_event => key_event,
 													 ac_add => ac_add, 
 													 ac_rmv => ac_rmv, 
 													 car_num => car_num);
 
-	--car_ram : ram port map(clk => clk, we => , rst, address, data_in, data_out);
+	keypad_cntrller : keypad_controller port map ( reset=>rst_inv,
+																  clk=>key_pad_clk,
+																  key_in=>key_in,
+																  key_scan=>key_scan,
+																  key_data=>key_pad_out,
+																  key_event=>key_event);
+																  
+	key_clk_dvd : seg_clk_divider port map ( clk => clk, rst => rst_inv,
+													 new_clk =>  key_pad_clk );
 end Behavioral;
 

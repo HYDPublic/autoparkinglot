@@ -5,88 +5,209 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">car_storage</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">sec</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">state_next</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">clk</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">new_clk</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">rst</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">c_addr</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">00000</arg>.
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">curr_location_inv</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">ac_prev</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">shift_reg5</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="524" delta="old" >All outputs of the instance &lt;<arg fmt="%s" index="1">btn_prev</arg>&gt; of the block &lt;<arg fmt="%s" index="2">dff</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">select_car_controller</arg>&gt;.
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">shift_reg4</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1305" delta="new" >Output &lt;<arg fmt="%s" index="1">ac_rmv</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1305" delta="new" >Output &lt;<arg fmt="%s" index="1">car_num</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">0000000000000000</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1305" delta="new" >Output &lt;<arg fmt="%s" index="1">ac_add</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">remove_event</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">input_event</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1306" delta="new" >Output &lt;<arg fmt="%s" index="1">de</arg>&gt; is never assigned.
+</msg>
+
+<msg type="warning" file="Xst" num="1306" delta="new" >Output &lt;<arg fmt="%s" index="1">data_out</arg>&gt; is never assigned.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">dip_switch&lt;4:1&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="1306" delta="new" >Output &lt;<arg fmt="%s" index="1">lcd_clk</arg>&gt; is never assigned.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">push_button&lt;3:1&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">minutes</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">curr_address</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">00000000</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">car_num</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">car_in</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">000000000000000000000000</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">ac_rmv</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">ac_add</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="new" >Hierarchical block &lt;<arg fmt="%s" index="1">dig_clk</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">top_module</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="new" >Hierarchical block &lt;<arg fmt="%s" index="1">led_clk_div</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">led_ctrl</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="new" >Hierarchical block &lt;<arg fmt="%s" index="1">led_dec</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">led_ctrl</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1899" delta="new" >Due to constant pushing, all outputs of the instance &lt;<arg fmt="%s" index="1">led_dec</arg>&gt; of the block &lt;<arg fmt="%s" index="2">led_decoder</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">ledcontroller</arg>&gt;.
 This instance will be removed from the design along with all underlying logic
 </msg>
 
-<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">btn_clk_div</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">select_car_controller</arg>&gt;.
-It will be removed from the design.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">led_clk_div/dclk</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ledcontroller</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">btn_next</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">select_car_controller</arg>&gt;.
-It will be removed from the design.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dig_clk/min_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top_module</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">temp_ac_next</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">select_car_controller</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dig_clk/min_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top_module</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">btn_next/data</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">select_car_controller</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dig_clk/min_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top_module</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">btn_clk_div/cnt_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">select_car_controller</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dig_clk/min_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top_module</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">btn_clk_div/cnt_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">select_car_controller</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dig_clk/min_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top_module</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">btn_clk_div/cnt_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">select_car_controller</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dig_clk/min_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top_module</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">btn_clk_div/cnt_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">select_car_controller</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dig_clk/count_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top_module</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">btn_clk_div/cnt_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">select_car_controller</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dig_clk/count_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top_module</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">btn_clk_div/cnt_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">select_car_controller</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dig_clk/count_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top_module</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">btn_clk_div/cnt_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">select_car_controller</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dig_clk/count_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top_module</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">btn_clk_div/cnt_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">select_car_controller</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dig_clk/count_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top_module</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">btn_clk_div/cnt_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">select_car_controller</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dig_clk/count_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top_module</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">btn_clk_div/cnt_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">select_car_controller</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dig_clk/count_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top_module</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">btn_clk_div/cnt_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">select_car_controller</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dig_clk/count_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top_module</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">btn_clk_div/cnt_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">select_car_controller</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dig_clk/count_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top_module</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">btn_clk_div/cnt_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">select_car_controller</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dig_clk/count_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top_module</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">btn_clk_div/cnt_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">select_car_controller</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dig_clk/count_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top_module</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">btn_clk_div/cnt_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">select_car_controller</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dig_clk/count_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top_module</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">btn_clk_div/cnt_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">select_car_controller</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dig_clk/count_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top_module</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">btn_clk_div/new_clk</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">select_car_controller</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dig_clk/count_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top_module</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dig_clk/count_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top_module</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dig_clk/count_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top_module</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dig_clk/count_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top_module</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dig_clk/count_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top_module</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dig_clk/count_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top_module</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dig_clk/count_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top_module</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dig_clk/count_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top_module</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dig_clk/count_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top_module</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dig_clk/count_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top_module</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dig_clk/count_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top_module</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dig_clk/count_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top_module</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dig_clk/count_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top_module</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dig_clk/count_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top_module</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dig_clk/count_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top_module</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dig_clk/count_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top_module</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dig_clk/count_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top_module</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dig_clk/count_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top_module</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dig_clk/count_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top_module</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dig_clk/clk</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top_module</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="new" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 </msg>
 
 </messages>

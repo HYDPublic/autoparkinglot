@@ -33,7 +33,6 @@ entity keypad_controller is
     Port ( clk : in  STD_LOGIC;
            reset : in  STD_LOGIC;
            key_in : in  STD_LOGIC_VECTOR (3 downto 0);
-			  
            key_scan : out  STD_LOGIC_VECTOR (3 downto 0);
            key_data : out  STD_LOGIC_VECTOR (3 downto 0);
 			  key_event : out STD_LOGIC

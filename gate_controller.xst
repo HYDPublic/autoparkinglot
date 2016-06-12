@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/minchul/Documents/autoparkinglot/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/minchul/Documents/autoparkinglot/xst"
+elaborate
+-ifn gate_controller.prj
+-ifmt mixed
