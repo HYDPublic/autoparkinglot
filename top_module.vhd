@@ -105,7 +105,7 @@ architecture Behavioral of top_module is
    end component;
    
 	component digi_clk is
-		port (clk1 : in std_logic;
+		port (clk1, rst : in std_logic;
    			freq : in std_logic_vector (2 downto 0);
 		   	minstd : out std_logic_vector(15 downto 0));
 	end component;
@@ -192,7 +192,7 @@ begin
 											 rst=>rst_inv,
 											 dclk=>clk_25m);
 	
-	dig_clk : digi_clk port map(clk1=>clk_25m,
+	dig_clk : digi_clk port map(clk1=>clk, rst => rst_inv,
 										 freq => freq, 
 										 minstd => minutes);
 		
