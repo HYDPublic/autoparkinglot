@@ -1,0 +1,3 @@
+MEMORY_INITIALIZATION_RADIX=16;
+MEMORY_INITIALIZATION_VECTOR=
+11110840,22220930,aaaaaaaa,33331010,aaaaaaaa,12341340,aaaaaaaa,56781630,10101740,aaaaaaaa,aaaaaaaa,aaaaaaaa,aaaaaaaa,aaaaaaaa,33502010,aaaaaaaa,aaaaaaaa,aaaaaaaa,aaaaaaaa,aaaaaaaa,aaaaaaaa,aaaaaaaa,aaaaaaaa,aaaaaaaa

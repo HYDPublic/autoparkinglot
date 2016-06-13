@@ -2,6 +2,7 @@
 _xmsgs\pn_parser.xmsgs
 car_reg_ram.asy
 car_reg_ram.gise
+car_reg_ram.mif
 car_reg_ram.ngc
 car_reg_ram.sym
 car_reg_ram.vhd

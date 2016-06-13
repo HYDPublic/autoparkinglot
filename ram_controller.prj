@@ -1,0 +1,5 @@
+vhdl work "ipcore_dir/car_reg_ram.vhd"
+vhdl work "ipcore_dir/counter0to23.vhd"
+vhdl work "ram_controller.vhd"
+vhdl work "clk_25m.vhd"
+vhdl work "u_clk_new.vhd"

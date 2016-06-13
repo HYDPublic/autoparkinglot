@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "C:/Users/minchul/Documents/autoparkinglot/sel_car_test_isim_beh.exe" -prj "C:/Users/minchul/Documents/autoparkinglot/sel_car_test_beh.prj" "work.sel_car_test" 
+-intstyle "ise" -incremental -o "C:/Users/minchul/Documents/autoparkinglot/ram_controller_test_isim_beh.exe" -prj "C:/Users/minchul/Documents/autoparkinglot/ram_controller_test_beh.prj" "work.ram_controller_test" 

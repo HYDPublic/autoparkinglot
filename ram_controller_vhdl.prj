@@ -1,0 +1,5 @@
+vhdl work "C:\Users\minchul\Documents\autoparkinglot\ipcore_dir\car_reg_ram.vhd"
+vhdl work "C:\Users\minchul\Documents\autoparkinglot\ipcore_dir\counter0to23.vhd"
+vhdl work "C:\Users\minchul\Documents\autoparkinglot\ram_controller.vhd"
+vhdl work "C:\Users\minchul\Documents\autoparkinglot\clk_25m.vhd"
+vhdl work "C:\Users\minchul\Documents\autoparkinglot\u_clk_new.vhd"

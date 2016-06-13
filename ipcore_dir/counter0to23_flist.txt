@@ -1,0 +1,17 @@
+# Output products list for <counter0to23>
+_xmsgs\pn_parser.xmsgs
+core_resources.txt
+counter0to23.asy
+counter0to23.gise
+counter0to23.ngc
+counter0to23.sym
+counter0to23.vhd
+counter0to23.vho
+counter0to23.xco
+counter0to23.xise
+counter0to23\doc\c_counter_binary_v11_0_readme.txt
+counter0to23\doc\c_counter_binary_v11_0_vinfo.html
+counter0to23\doc\ds215_counter.pdf
+counter0to23_flist.txt
+counter0to23_xmdf.tcl
+gui_latency.txt

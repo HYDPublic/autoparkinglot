@@ -1,3 +1,3 @@
-work	"btn_clock_divider.vhd"
-work	"dff.vhd"
-work	"select_car_controller.vhd"
+work	"ipcore_dir/car_reg_ram.vhd"
+work	"ipcore_dir/counter0to23.vhd"
+work	"ram_controller.vhd"

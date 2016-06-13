@@ -55,7 +55,7 @@ begin
 	begin
 	if rst = '1' then
 		sec <= 0;
-		ztime := (0,0,0,0);
+		zetime := (0,0,0,0);
 	else
 		if(clk'event and clk='1') then
 			sec <= sec+ 1;

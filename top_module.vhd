@@ -117,15 +117,6 @@ architecture Behavioral of top_module is
       douta: out std_logic_vector(7 downto 0));
    end component;
 	
-	component ram_controller is
-	    Port ( clk, rst : in  STD_LOGIC;
-			  real_clk : in STD_LOGIC_VECTOR (15 downto 0);
-           address : in  STD_LOGIC_VECTOR (4 downto 0);
-			  car_num : in STD_LOGIC_VECTOR (15 downto 0);
-           data_out : out  STD_LOGIC_VECTOR (31 downto 0);
-			  parkinglot : out STD_LOGIC_VECTOR (23 downto 0);
-           ac_show, ac_add, ac_rmv : in  STD_LOGIC);
-	end component;
 --end component
 
 --signals
@@ -180,13 +171,6 @@ begin
 	key_clk_dvd : seg_clk_divider port map(clk => clk, rst => rst_inv,
 														new_clk =>  key_pad_clk );
 													 
-	ram_ctrl : ram_controller port map(clk => clk, rst => rst_inv,
-												  real_clk => minutes,
-												  address => "00000",
-												  car_num => car_num,
-												  data_out => car_data_out,
-												  parkinglot => parkinglot,
-												  ac_show => ac_show, ac_add => ac_add, ac_rmv => ac_rmv);
 	---lcd----------------
 	u_lcd_clk : lcd_25m_clk port map(clk=>clk, 
 											 rst=>rst_inv,

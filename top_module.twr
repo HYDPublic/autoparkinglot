@@ -40,6 +40,16 @@ Data Sheet report:
 -----------------
 All values displayed in nanoseconds (ns)
 
+Setup/Hold to clock clk
+-------------+------------+------------+------------------+--------+
+             |Max Setup to|Max Hold to |                  | Clock  |
+Source       | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+-------------+------------+------------+------------------+--------+
+dip_switch<5>|    6.533(R)|   -2.633(R)|clk_BUFGP         |   0.000|
+dip_switch<6>|    5.175(R)|   -1.651(R)|clk_BUFGP         |   0.000|
+dip_switch<7>|    5.353(R)|   -1.867(R)|clk_BUFGP         |   0.000|
+-------------+------------+------------+------------------+--------+
+
 Clock clk to Pad
 ------------+------------+------------------+--------+
             | clk (edge) |                  | Clock  |
@@ -53,41 +63,41 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    4.802|         |         |         |
+clk            |    5.494|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Pad to Pad
 ---------------+---------------+---------+
 Source Pad     |Destination Pad|  Delay  |
 ---------------+---------------+---------+
-RSTB           |led_out<0>     |   11.919|
-RSTB           |led_out<1>     |   12.235|
-RSTB           |led_out<2>     |   11.929|
-RSTB           |led_out<3>     |   12.513|
-RSTB           |led_out<4>     |   11.876|
-RSTB           |led_out<5>     |   12.172|
-RSTB           |led_out<6>     |   12.169|
-RSTB           |led_out<7>     |   12.176|
-RSTB           |led_out<8>     |   13.093|
-RSTB           |led_out<9>     |   10.900|
-RSTB           |led_out<10>    |   10.947|
-RSTB           |led_out<11>    |    6.252|
-RSTB           |led_out<12>    |    5.480|
-RSTB           |led_out<13>    |    5.826|
-RSTB           |led_out<14>    |    6.134|
-RSTB           |led_out<15>    |    6.134|
-RSTB           |led_out<16>    |   12.161|
-RSTB           |led_out<17>    |   11.864|
-RSTB           |led_out<18>    |   12.150|
-RSTB           |led_out<19>    |   11.859|
-RSTB           |led_out<20>    |   10.973|
-RSTB           |led_out<21>    |   11.281|
-RSTB           |led_out<22>    |   13.938|
-RSTB           |led_out<23>    |   12.464|
+RSTB           |led_out<0>     |   11.594|
+RSTB           |led_out<1>     |   11.661|
+RSTB           |led_out<2>     |   11.301|
+RSTB           |led_out<3>     |   11.892|
+RSTB           |led_out<4>     |   11.892|
+RSTB           |led_out<5>     |   11.897|
+RSTB           |led_out<6>     |   11.897|
+RSTB           |led_out<7>     |   12.190|
+RSTB           |led_out<8>     |   15.259|
+RSTB           |led_out<9>     |   11.732|
+RSTB           |led_out<10>    |   12.952|
+RSTB           |led_out<11>    |    6.253|
+RSTB           |led_out<12>    |    5.482|
+RSTB           |led_out<13>    |    5.817|
+RSTB           |led_out<14>    |    6.125|
+RSTB           |led_out<15>    |    6.125|
+RSTB           |led_out<16>    |   14.249|
+RSTB           |led_out<17>    |   13.954|
+RSTB           |led_out<18>    |   13.956|
+RSTB           |led_out<19>    |   13.665|
+RSTB           |led_out<20>    |   12.779|
+RSTB           |led_out<21>    |   12.482|
+RSTB           |led_out<22>    |   13.951|
+RSTB           |led_out<23>    |   12.192|
 ---------------+---------------+---------+
 
 
-Analysis completed Sun Jun 12 15:26:35 2016 
+Analysis completed Sun Jun 12 15:49:08 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:

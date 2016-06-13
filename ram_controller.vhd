@@ -19,7 +19,7 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
 --use IEEE.NUMERIC_STD.ALL;
@@ -31,12 +31,11 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity ram_controller is
     Port ( clk, rst : in  STD_LOGIC;
-			  real_clk : in STD_LOGIC_VECTOR (15 downto 0);
-           address : in  STD_LOGIC_VECTOR (4 downto 0);
-			  car_num : in STD_LOGIC_VECTOR (15 downto 0);
-           data_out : out  STD_LOGIC_VECTOR (31 downto 0);
-			  parkinglot : out STD_LOGIC_VECTOR (23 downto 0);
-           ac_show, ac_add, ac_rmv : in  STD_LOGIC);
+			  ac_put, ac_rmv, ac_show : in STD_LOGIC;
+			  car_num : in STD_LOGIC_VECTOR(15 downto 0);
+			  addr : in STD_LOGIC_VECTOR(4 downto 0);
+			  car_data : out STD_LOGIC_VECTOR(31 downto 0);
+			  parkinglot : out STD_LOGIC_VECTOR(23 downto 0));
 end ram_controller;
 
 architecture Behavioral of ram_controller is
@@ -50,54 +49,49 @@ architecture Behavioral of ram_controller is
 		 douta : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
 	  );	
 	end component;
-	component empty_address_finder is
-    Port ( clk, rst, ena : in STD_LOGIC;
-			  parkinglot : in  STD_LOGIC_VECTOR (23 downto 0);
-			  find_event : out STD_LOGIC;
-           address : out  STD_LOGIC_VECTOR (4 downto 0));	
+	component counter0to23 IS
+	  PORT (
+		 clk : IN STD_LOGIC;
+		 ce : IN STD_LOGIC;
+		 sclr : IN STD_LOGIC;
+		 q : OUT STD_LOGIC_VECTOR(4 DOWNTO 0)
+	  );
 	end component;
-	signal regi_data : STD_LOGIC_VECTOR (31 downto 0);
+
+------ end component
 	signal ram_wea : STD_LOGIC_VECTOR (0 downto 0);
-	signal ram_clk : STD_LOGIC;
-	signal parkinglot_data : STD_LOGIC_VECTOR (23 downto 0);
-	signal find_empty_event : STD_LOGIC;
-	signal find_empty_address : STD_LOGIC_VECTOR (4 downto 0);
-	signal find_empty_ena : STD_LOGIC;
-	signal rst_inv : STD_LOGIC;
+	signal ram_addr : STD_LOGIC_VECTOR (4 downto 0);
+	signal ram_din, ram_dout : STD_LOGIC_VECTOR (31 downto 0);
+	signal find_car, find_empty_space, write_data, read_data : STD_LOGIC;
+	signal c_clk, ram_cnt_ce, ram_cnt_sclr : STD_LOGIC;
+	signal addr_cnt : STD_LOGIC_VECTOR (4 downto 0);
 begin
+	c_clk <= '0' when rst = '1' else
+			  not c_clk when falling_edge(clk) else
+			  c_clk;
+	car_ram : car_reg_ram port map (clka => clk, rsta => rst, wea => ram_wea, addra => ram_addr, dina => ram_din, douta => ram_dout);
 	
-	rst_inv <= not rst;
-	ram_clk <= ac_show and ac_add;
-	ram_wea <= "0" when ac_show = '1' else "1";
-	
-	car_ram : car_reg_ram port map (clka => ram_clk,
-									rsta => rst_inv,
-									wea => ram_wea,
-									addra => address,
-									dina => x"00000000",
-									douta => data_out);
-									
-	empty_addr_finder : empty_address_finder port map (clk => clk, 
-															  rst => rst, 
-															  ena => find_empty_ena, 
-															  parkinglot => parkinglot_data, 
-															  find_event => find_empty_event, 
-															  address => find_empty_address);
-	
-	process(find_empty_event)
+	process(clk, ac_put, ac_rmv, ac_show)
 	begin
-		if rising_edge(find_empty_event) then
+		
+	end process;
+	
+	process(find_car, find_empty_space, write_data, read_data)
+	begin
+		if find_car = '1' then
 			
-			--wea = 1
-			--clk = 1
-			--addra = find_empty_addr
-			--din = din
-			--dout = 따로 저장
 		end if;
 	end process;
 	
-	parkinglot <= parkinglot_data;
-	
-	
+	process(clk, c_clk, ram_addr, ram_dout, find_car, find_empty_space)
+	begin
+		if find_car = '1' then
+		elsif find_empty_space = '1' then
+		end if;
+	end process;
+	ram_cnt_ce <= find_car or find_empty_space;
+	ram_cnt_sclr <= not (find_car or find_empty_space);
+	ram_addr <= addr_cnt when (find_car or find_empty_space) = '1' else "11000";
+	ram_cnt : counter0to23 port map(clk => c_clk, ce => ram_cnt_ce, sclr => ram_cnt_sclr, q => addr_cnt);
 end Behavioral;
 

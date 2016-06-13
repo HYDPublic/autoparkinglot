@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: top_module.prj
 
@@ -116,8 +116,7 @@ Architecture behavioral of Entity count_0to5 is up to date.
 Compiling vhdl file "C:/Users/minchul/Documents/autoparkinglot/reg.vhd" in Library work.
 Architecture behavioral of Entity reg is up to date.
 Compiling vhdl file "C:/Users/minchul/Documents/autoparkinglot/ipcore_dir/car_reg_ram.vhd" in Library work.
-Entity <car_reg_ram> compiled.
-Entity <car_reg_ram> (Architecture <car_reg_ram_a>) compiled.
+Architecture car_reg_ram_a of Entity car_reg_ram is up to date.
 Compiling vhdl file "C:/Users/minchul/Documents/autoparkinglot/empty_address_finder.vhd" in Library work.
 Architecture behavioral of Entity empty_address_finder is up to date.
 Compiling vhdl file "C:/Users/minchul/Documents/autoparkinglot/x4_clk_divider.vhd" in Library work.
@@ -141,12 +140,12 @@ Architecture behavioral of Entity gate_controller is up to date.
 Compiling vhdl file "C:/Users/minchul/Documents/autoparkinglot/keypad_controller.vhd" in Library work.
 Architecture behavioral of Entity keypad_controller is up to date.
 Compiling vhdl file "C:/Users/minchul/Documents/autoparkinglot/ram_controller.vhd" in Library work.
-Entity <ram_controller> compiled.
-Entity <ram_controller> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity ram_controller is up to date.
 Compiling vhdl file "C:/Users/minchul/Documents/autoparkinglot/lcd_25m_clk.vhd" in Library work.
 Architecture behavioral of Entity lcd_25m_clk is up to date.
 Compiling vhdl file "C:/Users/minchul/Documents/autoparkinglot/digi_clk.vhd" in Library work.
-Architecture behavioral of Entity digi_clk is up to date.
+Entity <digi_clk> compiled.
+Entity <digi_clk> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/minchul/Documents/autoparkinglot/ipcore_dir/NumsRom.vhd" in Library work.
 Architecture numsrom_a of Entity numsrom is up to date.
 Compiling vhdl file "C:/Users/minchul/Documents/autoparkinglot/TFT_LCD_Image.vhd" in Library work.
@@ -156,7 +155,8 @@ Architecture behavioral of Entity u_clk_new is up to date.
 Compiling vhdl file "C:/Users/minchul/Documents/autoparkinglot/clk_25m.vhd" in Library work.
 Architecture behavioral of Entity clk_25m is up to date.
 Compiling vhdl file "C:/Users/minchul/Documents/autoparkinglot/top_module.vhd" in Library work.
-Architecture behavioral of Entity top_module is up to date.
+Entity <top_module> compiled.
+Entity <top_module> (Architecture <behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -206,7 +206,7 @@ Analyzing hierarchy for entity <dff> in library <work> (architecture <behavioral
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <top_module> in library <work> (Architecture <behavioral>).
-WARNING:Xst:2211 - "C:/Users/minchul/Documents/autoparkinglot/top_module.vhd" line 199: Instantiating black box module <NumsRom>.
+WARNING:Xst:2211 - "C:/Users/minchul/Documents/autoparkinglot/top_module.vhd" line 200: Instantiating black box module <NumsRom>.
 Entity <top_module> analyzed. Unit <top_module> generated.
 
 Analyzing Entity <ledcontroller> in library <work> (Architecture <behavioral>).
@@ -249,7 +249,7 @@ Analyzing Entity <seg_clk_divider> in library <work> (Architecture <behavioral>)
 Entity <seg_clk_divider> analyzed. Unit <seg_clk_divider> generated.
 
 Analyzing Entity <ram_controller> in library <work> (Architecture <behavioral>).
-WARNING:Xst:2211 - "C:/Users/minchul/Documents/autoparkinglot/ram_controller.vhd" line 72: Instantiating black box module <car_reg_ram>.
+WARNING:Xst:2211 - "C:/Users/minchul/Documents/autoparkinglot/ram_controller.vhd" line 73: Instantiating black box module <car_reg_ram>.
 Entity <ram_controller> analyzed. Unit <ram_controller> generated.
 
 Analyzing Entity <empty_address_finder> in library <work> (Architecture <behavioral>).
@@ -264,6 +264,7 @@ Analyzing Entity <lcd_25m_clk> in library <work> (Architecture <behavioral>).
 Entity <lcd_25m_clk> analyzed. Unit <lcd_25m_clk> generated.
 
 Analyzing Entity <digi_clk> in library <work> (Architecture <behavioral>).
+WARNING:Xst:1610 - "C:/Users/minchul/Documents/autoparkinglot/digi_clk.vhd" line 58: Width mismatch. <zetime> has a width of 128 bits but assigned expression is 4-bit wide.
 Entity <digi_clk> analyzed. Unit <digi_clk> generated.
 
 Analyzing Entity <TFT_LCD_image> in library <work> (Architecture <behavioral>).
@@ -302,17 +303,20 @@ Synthesizing Unit <digi_clk>.
     Found 32-bit up counter for signal <count>.
     Found 32-bit comparator greatequal for signal <count$cmp_ge0000> created at line 41.
     Found 6-bit up counter for signal <sec>.
-    Found 96-bit register for signal <zetime<0:2>>.
-    Found 96-bit register for signal <zetime<3>>.
-    Found 32-bit adder for signal <zetime_0$add0000> created at line 61.
-    Found 32-bit adder for signal <zetime_1$add0000> created at line 64.
-    Found 32-bit adder for signal <zetime_2$add0000> created at line 67.
-    Found 32-bit adder for signal <zetime_3$addsub0000> created at line 70.
+    Found 64-bit register for signal <zetime<0:1>>.
+    Found 64-bit register for signal <zetime<2>>.
+    Found 32-bit register for signal <zetime<3>>.
+    Found 32-bit adder for signal <zetime_0$add0000> created at line 64.
+    Found 32-bit adder for signal <zetime_1$add0000> created at line 67.
+    Found 32-bit adder for signal <zetime_2$add0000> created at line 70.
+    Found 32-bit 4-to-1 multiplexer for signal <zetime_2$mux0002>.
+    Found 32-bit adder for signal <zetime_3$addsub0000> created at line 73.
     Summary:
-	inferred   5 Counter(s).
-	inferred  33 D-type flip-flop(s).
+	inferred   4 Counter(s).
+	inferred  65 D-type flip-flop(s).
 	inferred   4 Adder/Subtractor(s).
 	inferred   1 Comparator(s).
+	inferred  32 Multiplexer(s).
 Unit <digi_clk> synthesized.
 
 
@@ -540,23 +544,23 @@ Macro Statistics
  12-bit subtractor                                     : 3
  14-bit adder carry in                                 : 1
  32-bit adder                                          : 4
-# Counters                                             : 14
+# Counters                                             : 13
  11-bit up counter                                     : 1
  12-bit up counter                                     : 1
  16-bit up counter                                     : 2
  2-bit up counter                                      : 1
  26-bit up counter                                     : 1
  3-bit up counter                                      : 1
- 32-bit up counter                                     : 4
+ 32-bit up counter                                     : 3
  4-bit up counter                                      : 1
  5-bit up counter                                      : 1
  6-bit up counter                                      : 1
-# Registers                                            : 39
+# Registers                                            : 40
  1-bit register                                        : 28
  14-bit register                                       : 1
  16-bit register                                       : 1
  24-bit register                                       : 1
- 32-bit register                                       : 1
+ 32-bit register                                       : 2
  4-bit register                                        : 3
  5-bit register                                        : 2
  6-bit register                                        : 2
@@ -573,6 +577,8 @@ Macro Statistics
  24-bit comparator not equal                           : 1
  32-bit comparator greatequal                          : 1
  4-bit comparator lessequal                            : 1
+# Multiplexers                                         : 1
+ 32-bit 4-to-1 multiplexer                             : 1
 
 =========================================================================
 
@@ -615,19 +621,19 @@ Macro Statistics
  12-bit subtractor                                     : 3
  14-bit adder carry in                                 : 1
  32-bit adder                                          : 4
-# Counters                                             : 14
+# Counters                                             : 13
  11-bit up counter                                     : 1
  12-bit up counter                                     : 1
  16-bit up counter                                     : 2
  2-bit up counter                                      : 1
  26-bit up counter                                     : 1
  3-bit up counter                                      : 1
- 32-bit up counter                                     : 4
+ 32-bit up counter                                     : 3
  4-bit up counter                                      : 1
  5-bit up counter                                      : 1
  6-bit up counter                                      : 1
-# Registers                                            : 148
- Flip-Flops                                            : 148
+# Registers                                            : 180
+ Flip-Flops                                            : 180
 # Latches                                              : 2
  5-bit latch                                           : 2
 # Comparators                                          : 31
@@ -641,6 +647,8 @@ Macro Statistics
  24-bit comparator not equal                           : 1
  32-bit comparator greatequal                          : 1
  4-bit comparator lessequal                            : 1
+# Multiplexers                                         : 1
+ 32-bit 4-to-1 multiplexer                             : 1
 
 =========================================================================
 
@@ -703,11 +711,14 @@ Optimizing unit <seg_controller> ...
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block top_module, actual ratio is 2.
+FlipFlop u_tft_lcd/hsync_cnt_4 has been replicated 1 time(s)
 FlipFlop u_tft_lcd/hsync_cnt_5 has been replicated 1 time(s)
 FlipFlop u_tft_lcd/hsync_cnt_6 has been replicated 1 time(s)
+FlipFlop u_tft_lcd/hsync_cnt_7 has been replicated 1 time(s)
 FlipFlop u_tft_lcd/hsync_cnt_8 has been replicated 1 time(s)
 FlipFlop u_tft_lcd/hsync_cnt_9 has been replicated 1 time(s)
-FlipFlop u_tft_lcd/vsync_cnt_8 has been replicated 1 time(s)
+FlipFlop u_tft_lcd/vsync_cnt_6 has been replicated 1 time(s)
+FlipFlop u_tft_lcd/vsync_cnt_7 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -715,8 +726,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 309
- Flip-Flops                                            : 309
+# Registers                                            : 312
+ Flip-Flops                                            : 312
 
 =========================================================================
 
@@ -745,30 +756,29 @@ Design Statistics
 # IOs                              : 78
 
 Cell Usage :
-# BELS                             : 1673
+# BELS                             : 1654
 #      GND                         : 10
-#      INV                         : 30
-#      LUT1                        : 302
-#      LUT2                        : 150
-#      LUT2_D                      : 1
-#      LUT2_L                      : 5
-#      LUT3                        : 85
-#      LUT3_D                      : 2
+#      INV                         : 29
+#      LUT1                        : 270
+#      LUT2                        : 240
+#      LUT2_D                      : 2
+#      LUT2_L                      : 4
+#      LUT3                        : 73
+#      LUT3_D                      : 5
 #      LUT3_L                      : 8
-#      LUT4                        : 287
-#      LUT4_D                      : 24
-#      LUT4_L                      : 32
-#      MUXCY                       : 380
-#      MUXF5                       : 29
+#      LUT4                        : 288
+#      LUT4_D                      : 26
+#      LUT4_L                      : 22
+#      MUXCY                       : 357
+#      MUXF5                       : 24
 #      VCC                         : 3
-#      XORCY                       : 325
-# FlipFlops/Latches                : 311
-#      FDC                         : 65
-#      FDCE                        : 57
-#      FDE                         : 43
+#      XORCY                       : 293
+# FlipFlops/Latches                : 314
+#      FDC                         : 73
+#      FDCE                        : 186
+#      FDE                         : 11
 #      FDP                         : 8
-#      FDR                         : 37
-#      FDRE                        : 96
+#      FDR                         : 31
 #      FDS                         : 5
 # RAMS                             : 7
 #      RAMB16                      : 7
@@ -787,9 +797,9 @@ Device utilization summary:
 
 Selected Device : 3s2000fg456-5 
 
- Number of Slices:                      491  out of  20480     2%  
- Number of Slice Flip Flops:            307  out of  40960     0%  
- Number of 4 input LUTs:                926  out of  40960     2%  
+ Number of Slices:                      517  out of  20480     2%  
+ Number of Slice Flip Flops:            310  out of  40960     0%  
+ Number of 4 input LUTs:                967  out of  40960     2%  
  Number of IOs:                          78
  Number of bonded IOBs:                  69  out of    333    20%  
     IOB Flip Flops:                       4
@@ -818,9 +828,9 @@ Clock Information:
 ------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
 Clock Signal                                          | Clock buffer(FF name)                                                                                                                                                                                                                          | Load  |
 ------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-u_lcd_clk/dclk1                                       | BUFG                                                                                                                                                                                                                                           | 100   |
+u_lcd_clk/dclk1                                       | BUFG                                                                                                                                                                                                                                           | 70    |
 u_image_rom/N1                                        | NONE(u_image_rom/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/s3_init.ram/dpram.dp2x2.ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/s3_init.ram/dpram.dp2x2.ram)| 6     |
-clk                                                   | BUFGP                                                                                                                                                                                                                                          | 39    |
+clk                                                   | BUFGP                                                                                                                                                                                                                                          | 72    |
 N0                                                    | NONE(ram_ctrl/car_ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/spram.ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/spram.ram)   | 1     |
 gate_ctrl/number_event(gate_ctrl/calc/number_event1:O)| NONE(*)(gate_ctrl/shift_reg/REG3/reg0[3].reg/data)                                                                                                                                                                                             | 16    |
 dig_clk/clk1                                          | BUFG                                                                                                                                                                                                                                           | 134   |
@@ -838,8 +848,7 @@ Asynchronous Control Signals Information:
 --------------------------------------------------+------------------------------------------------+-------+
 Control Signal                                    | Buffer(FF name)                                | Load  |
 --------------------------------------------------+------------------------------------------------+-------+
-RSTB                                              | IBUF                                           | 63    |
-u_tft_lcd/RSTB_inv(u_tft_lcd/RSTB_inv1_INV_0:O)   | NONE(u_tft_lcd/addrcnt_0)                      | 51    |
+rst_inv(u_tft_lcd/RSTB_inv1_INV_0:O)              | NONE(dig_clk/sec_0)                            | 251   |
 gate_ctrl/rst_shift_reg(gate_ctrl/rst_shift_reg:O)| NONE(gate_ctrl/shift_reg/REG0/reg0[0].reg/data)| 16    |
 --------------------------------------------------+------------------------------------------------+-------+
 
@@ -847,10 +856,10 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 13.990ns (Maximum Frequency: 71.482MHz)
+   Minimum period: 14.103ns (Maximum Frequency: 70.907MHz)
    Minimum input arrival time before clock: 7.350ns
    Maximum output required time after clock: 12.052ns
-   Maximum combinational path delay: 7.491ns
+   Maximum combinational path delay: 9.644ns
 
 Timing Detail:
 --------------
@@ -858,43 +867,42 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'u_lcd_clk/dclk1'
-  Clock period: 13.990ns (frequency: 71.482MHz)
-  Total number of paths / destination ports: 102673 / 251
+  Clock period: 14.103ns (frequency: 70.907MHz)
+  Total number of paths / destination ports: 104848 / 189
 -------------------------------------------------------------------------
-Delay:               13.990ns (Levels of Logic = 14)
-  Source:            u_tft_lcd/hsync_cnt_10 (FF)
+Delay:               14.103ns (Levels of Logic = 13)
+  Source:            u_tft_lcd/hsync_cnt_11 (FF)
   Destination:       u_tft_lcd/addrcnt_13 (FF)
   Source Clock:      u_lcd_clk/dclk1 rising
   Destination Clock: u_lcd_clk/dclk1 rising
 
-  Data Path: u_tft_lcd/hsync_cnt_10 to u_tft_lcd/addrcnt_13
+  Data Path: u_tft_lcd/hsync_cnt_11 to u_tft_lcd/addrcnt_13
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q             10   0.626   1.259  u_tft_lcd/hsync_cnt_10 (u_tft_lcd/hsync_cnt_10)
-     LUT2:I0->O           12   0.479   1.009  u_tft_lcd/Mcompar_rgb_data_cmp_le0000_lut<6> (u_tft_lcd/Mcompar_rgb_data_cmp_le0000_lut<6>)
-     LUT4:I2->O            8   0.479   0.980  u_tft_lcd/addrcnt_cmp_eq000621 (u_tft_lcd/N80)
-     LUT3:I2->O            5   0.479   0.842  u_tft_lcd/addrcnt_mux0023<6>2210 (u_tft_lcd/N86)
-     LUT4:I2->O            3   0.479   0.830  u_tft_lcd/addrcnt_mux0023<0>11 (u_tft_lcd/N9)
-     LUT3:I2->O            1   0.479   0.000  u_tft_lcd/addrcnt_mux0023<5>37_G (N299)
-     MUXF5:I1->O          15   0.314   1.180  u_tft_lcd/addrcnt_mux0023<5>37 (u_tft_lcd/N13)
-     LUT2:I1->O            1   0.479   0.704  u_tft_lcd/addrcnt_mux0022<9>_SW2 (N248)
-     LUT4:I3->O            1   0.479   0.000  u_tft_lcd/Madd_addrcnt_addsub0003_lut<9> (u_tft_lcd/Madd_addrcnt_addsub0003_lut<9>)
-     MUXCY:S->O            1   0.435   0.000  u_tft_lcd/Madd_addrcnt_addsub0003_cy<9> (u_tft_lcd/Madd_addrcnt_addsub0003_cy<9>)
-     MUXCY:CI->O           1   0.056   0.000  u_tft_lcd/Madd_addrcnt_addsub0003_cy<10> (u_tft_lcd/Madd_addrcnt_addsub0003_cy<10>)
+     FDC:C->Q             10   0.626   1.259  u_tft_lcd/hsync_cnt_11 (u_tft_lcd/hsync_cnt_11)
+     LUT3_D:I0->O          1   0.479   0.740  u_tft_lcd/addrcnt_cmp_lt00122_SW0 (N185)
+     LUT4:I2->O            4   0.479   0.838  u_tft_lcd/addrcnt_cmp_lt00122 (u_tft_lcd/addrcnt_cmp_lt0012)
+     LUT3:I2->O            2   0.479   0.915  u_tft_lcd/addrcnt_mux0023<5>116_SW0 (N224)
+     LUT4:I1->O            1   0.479   0.000  u_tft_lcd/addrcnt_mux0023<5>116_F (N316)
+     MUXF5:I0->O          24   0.314   1.586  u_tft_lcd/addrcnt_mux0023<5>116 (u_tft_lcd/N0)
+     LUT3_D:I2->O          7   0.479   0.929  u_tft_lcd/addrcnt_mux0023<5>37 (u_tft_lcd/N13)
+     LUT4:I3->O            1   0.479   0.704  u_tft_lcd/addrcnt_mux0022<10>_SW1 (N136)
+     LUT4:I3->O            1   0.479   0.000  u_tft_lcd/Madd_addrcnt_addsub0003_lut<10> (u_tft_lcd/Madd_addrcnt_addsub0003_lut<10>)
+     MUXCY:S->O            1   0.435   0.000  u_tft_lcd/Madd_addrcnt_addsub0003_cy<10> (u_tft_lcd/Madd_addrcnt_addsub0003_cy<10>)
      MUXCY:CI->O           1   0.056   0.000  u_tft_lcd/Madd_addrcnt_addsub0003_cy<11> (u_tft_lcd/Madd_addrcnt_addsub0003_cy<11>)
      MUXCY:CI->O           0   0.056   0.000  u_tft_lcd/Madd_addrcnt_addsub0003_cy<12> (u_tft_lcd/Madd_addrcnt_addsub0003_cy<12>)
      XORCY:CI->O           1   0.786   0.851  u_tft_lcd/Madd_addrcnt_addsub0003_xor<13> (u_tft_lcd/addrcnt_addsub0003<13>)
      LUT2:I1->O            1   0.479   0.000  u_tft_lcd/addrcnt_mux0021<0>1 (u_tft_lcd/addrcnt_mux0021<0>)
      FDCE:D                    0.176          u_tft_lcd/addrcnt_13
     ----------------------------------------
-    Total                     13.990ns (6.336ns logic, 7.654ns route)
-                                       (45.3% logic, 54.7% route)
+    Total                     14.103ns (6.280ns logic, 7.823ns route)
+                                       (44.5% logic, 55.5% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 6.996ns (frequency: 142.935MHz)
-  Total number of paths / destination ports: 852 / 39
+  Total number of paths / destination ports: 3163 / 105
 -------------------------------------------------------------------------
 Delay:               6.996ns (Levels of Logic = 4)
   Source:            key_clk_dvd/cnt_data_8 (FF)
@@ -939,20 +947,20 @@ Delay:               1.547ns (Levels of Logic = 0)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'dig_clk/clk1'
-  Clock period: 11.406ns (frequency: 87.676MHz)
-  Total number of paths / destination ports: 226169 / 364
+  Clock period: 13.533ns (frequency: 73.892MHz)
+  Total number of paths / destination ports: 174408 / 262
 -------------------------------------------------------------------------
-Delay:               11.406ns (Levels of Logic = 34)
+Delay:               13.533ns (Levels of Logic = 33)
   Source:            dig_clk/zetime_0_1 (FF)
-  Destination:       dig_clk/zetime_1_31 (FF)
+  Destination:       dig_clk/zetime_3_31 (FF)
   Source Clock:      dig_clk/clk1 rising
   Destination Clock: dig_clk/clk1 rising
 
-  Data Path: dig_clk/zetime_0_1 to dig_clk/zetime_1_31
+  Data Path: dig_clk/zetime_0_1 to dig_clk/zetime_3_31
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q            10   0.626   1.259  dig_clk/zetime_0_1 (dig_clk/zetime_0_1)
+     FDCE:C->Q             9   0.626   1.250  dig_clk/zetime_0_1 (dig_clk/zetime_0_1)
      LUT1:I0->O            1   0.479   0.000  dig_clk/Madd_zetime_0_add0000_cy<1>_rt (dig_clk/Madd_zetime_0_add0000_cy<1>_rt)
      MUXCY:S->O            1   0.435   0.000  dig_clk/Madd_zetime_0_add0000_cy<1> (dig_clk/Madd_zetime_0_add0000_cy<1>)
      MUXCY:CI->O           1   0.056   0.000  dig_clk/Madd_zetime_0_add0000_cy<2> (dig_clk/Madd_zetime_0_add0000_cy<2>)
@@ -974,9 +982,7 @@ Delay:               11.406ns (Levels of Logic = 34)
      MUXCY:CI->O           1   0.056   0.000  dig_clk/Madd_zetime_0_add0000_cy<18> (dig_clk/Madd_zetime_0_add0000_cy<18>)
      MUXCY:CI->O           1   0.056   0.000  dig_clk/Madd_zetime_0_add0000_cy<19> (dig_clk/Madd_zetime_0_add0000_cy<19>)
      MUXCY:CI->O           1   0.056   0.000  dig_clk/Madd_zetime_0_add0000_cy<20> (dig_clk/Madd_zetime_0_add0000_cy<20>)
-     MUXCY:CI->O           1   0.056   0.000  dig_clk/Madd_zetime_0_add0000_cy<21> (dig_clk/Madd_zetime_0_add0000_cy<21>)
-     MUXCY:CI->O           1   0.056   0.000  dig_clk/Madd_zetime_0_add0000_cy<22> (dig_clk/Madd_zetime_0_add0000_cy<22>)
-     XORCY:CI->O           1   0.786   0.976  dig_clk/Madd_zetime_0_add0000_xor<23> (dig_clk/zetime_0_add0000<23>)
+     XORCY:CI->O           1   0.786   0.976  dig_clk/Madd_zetime_0_add0000_xor<21> (dig_clk/zetime_0_add0000<21>)
      LUT4:I0->O            1   0.479   0.000  dig_clk/zetime_0_cmp_eq0000_wg_lut<0> (dig_clk/zetime_0_cmp_eq0000_wg_lut<0>)
      MUXCY:S->O            1   0.435   0.000  dig_clk/zetime_0_cmp_eq0000_wg_cy<0> (dig_clk/zetime_0_cmp_eq0000_wg_cy<0>)
      MUXCY:CI->O           1   0.056   0.000  dig_clk/zetime_0_cmp_eq0000_wg_cy<1> (dig_clk/zetime_0_cmp_eq0000_wg_cy<1>)
@@ -985,12 +991,13 @@ Delay:               11.406ns (Levels of Logic = 34)
      MUXCY:CI->O           1   0.056   0.000  dig_clk/zetime_0_cmp_eq0000_wg_cy<4> (dig_clk/zetime_0_cmp_eq0000_wg_cy<4>)
      MUXCY:CI->O           1   0.056   0.000  dig_clk/zetime_0_cmp_eq0000_wg_cy<5> (dig_clk/zetime_0_cmp_eq0000_wg_cy<5>)
      MUXCY:CI->O           1   0.056   0.000  dig_clk/zetime_0_cmp_eq0000_wg_cy<6> (dig_clk/zetime_0_cmp_eq0000_wg_cy<6>)
-     MUXCY:CI->O           3   0.265   1.066  dig_clk/zetime_0_cmp_eq0000_wg_cy<7> (dig_clk/zetime_0_cmp_eq0000)
-     LUT2:I0->O           64   0.479   1.731  dig_clk/zetime_0_and00001 (dig_clk/zetime_0_and0000)
-     FDRE:R                    0.892          dig_clk/zetime_0_0
+     MUXCY:CI->O          34   0.265   1.755  dig_clk/zetime_0_cmp_eq0000_wg_cy<7> (dig_clk/zetime_0_cmp_eq0000)
+     LUT2:I1->O           33   0.479   1.603  dig_clk/zetime_3_not000122 (dig_clk/zetime_1_not0001)
+     LUT4:I3->O           32   0.479   1.575  dig_clk/zetime_3_not0001 (dig_clk/zetime_3_not0001)
+     FDCE:CE                   0.524          dig_clk/zetime_3_0
     ----------------------------------------
-    Total                     11.406ns (6.374ns logic, 5.032ns route)
-                                       (55.9% logic, 44.1% route)
+    Total                     13.533ns (6.374ns logic, 7.159ns route)
+                                       (47.1% logic, 52.9% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'key_clk_dvd/new_clk'
@@ -1016,10 +1023,10 @@ Delay:               3.449ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'keypad_cntrller/x4_DVD/d_clk'
-  Clock period: 6.890ns (frequency: 145.147MHz)
+  Clock period: 7.126ns (frequency: 140.340MHz)
   Total number of paths / destination ports: 112 / 16
 -------------------------------------------------------------------------
-Delay:               6.890ns (Levels of Logic = 4)
+Delay:               7.126ns (Levels of Logic = 4)
   Source:            keypad_cntrller/scan_cnt_2 (FF)
   Destination:       keypad_cntrller/key_data_int_2 (FF)
   Source Clock:      keypad_cntrller/x4_DVD/d_clk rising
@@ -1032,12 +1039,12 @@ Delay:               6.890ns (Levels of Logic = 4)
      FDP:C->Q             10   0.626   1.259  keypad_cntrller/scan_cnt_2 (keypad_cntrller/scan_cnt_2)
      LUT4:I0->O            3   0.479   0.941  keypad_cntrller/key_temp0_cmp_eq00001 (keypad_cntrller/key_temp0_cmp_eq0000)
      LUT2:I1->O            1   0.479   0.000  keypad_cntrller/key_data_int_mux0000<1>82 (keypad_cntrller/key_data_int_mux0000<1>82)
-     MUXF5:I0->O           1   0.314   0.740  keypad_cntrller/key_data_int_mux0000<1>8_f5 (keypad_cntrller/key_data_int_mux0000<1>8)
-     LUT3:I2->O            1   0.479   0.681  keypad_cntrller/key_data_int_mux0000<1>14 (keypad_cntrller/key_data_int_mux0000<1>14)
+     MUXF5:I0->O           1   0.314   0.976  keypad_cntrller/key_data_int_mux0000<1>8_f5 (keypad_cntrller/key_data_int_mux0000<1>8)
+     LUT3:I0->O            1   0.479   0.681  keypad_cntrller/key_data_int_mux0000<1>14 (keypad_cntrller/key_data_int_mux0000<1>14)
      FDS:S                     0.892          keypad_cntrller/key_data_int_2
     ----------------------------------------
-    Total                      6.890ns (3.269ns logic, 3.621ns route)
-                                       (47.4% logic, 52.6% route)
+    Total                      7.126ns (3.269ns logic, 3.857ns route)
+                                       (45.9% logic, 54.1% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'gate_ctrl/seg_dvd/new_clk'
@@ -1065,7 +1072,7 @@ Delay:               2.917ns (Levels of Logic = 1)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'N0'
   Total number of paths / destination ports: 2 / 2
 -------------------------------------------------------------------------
-Offset:              3.014ns (Levels of Logic = 2)
+Offset:              1.930ns (Levels of Logic = 2)
   Source:            RSTB (PAD)
   Destination:       ram_ctrl/car_ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/spram.ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/spram.ram (RAM)
   Destination Clock: N0 rising
@@ -1074,22 +1081,22 @@ Offset:              3.014ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            92   0.715   1.867  RSTB_IBUF (RSTB_IBUF)
+     IBUF:I->O             5   0.715   0.783  RSTB_IBUF (RSTB_IBUF)
      begin scope: 'ram_ctrl/car_ram'
      begin scope: 'U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/spram.ram'
      RAMB16:SSRB               0.432          U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/spram.ram
     ----------------------------------------
-    Total                      3.014ns (1.147ns logic, 1.867ns route)
-                                       (38.1% logic, 61.9% route)
+    Total                      1.930ns (1.147ns logic, 0.783ns route)
+                                       (59.4% logic, 40.6% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'u_lcd_clk/dclk1'
-  Total number of paths / destination ports: 2054 / 41
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 2046 / 33
 -------------------------------------------------------------------------
 Offset:              7.350ns (Levels of Logic = 29)
   Source:            dip_switch<5> (PAD)
   Destination:       dig_clk/count_31 (FF)
-  Destination Clock: u_lcd_clk/dclk1 rising
+  Destination Clock: clk rising
 
   Data Path: dip_switch<5> to dig_clk/count_31
                                 Gate     Net
@@ -1124,10 +1131,31 @@ Offset:              7.350ns (Levels of Logic = 29)
      MUXCY:CI->O           1   0.056   0.000  dig_clk/Mcompar_count_cmp_ge0000_cy<25> (dig_clk/Mcompar_count_cmp_ge0000_cy<25>)
      MUXCY:CI->O           1   0.056   0.000  dig_clk/Mcompar_count_cmp_ge0000_cy<26> (dig_clk/Mcompar_count_cmp_ge0000_cy<26>)
      MUXCY:CI->O          33   0.246   1.580  dig_clk/Mcompar_count_cmp_ge0000_cy<27> (dig_clk/count_cmp_ge0000)
-     FDS:S                     0.892          dig_clk/count_0
+     FDR:R                     0.892          dig_clk/count_1
     ----------------------------------------
     Total                      7.350ns (4.154ns logic, 3.196ns route)
                                        (56.5% logic, 43.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'u_lcd_clk/dclk1'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              5.046ns (Levels of Logic = 3)
+  Source:            RSTB (PAD)
+  Destination:       u_tft_lcd/r_data_4 (FF)
+  Destination Clock: u_lcd_clk/dclk1 rising
+
+  Data Path: RSTB to u_tft_lcd/r_data_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   0.715   1.078  RSTB_IBUF (RSTB_IBUF)
+     LUT3:I0->O            1   0.479   0.851  u_tft_lcd/g_data_and000030 (u_tft_lcd/g_data_and000030)
+     LUT4:I1->O            8   0.479   0.921  u_tft_lcd/g_data_and000034 (u_tft_lcd/g_data_and0000)
+     FDE:CE                    0.524          u_tft_lcd/b_data_2
+    ----------------------------------------
+    Total                      5.046ns (2.197ns logic, 2.849ns route)
+                                       (43.5% logic, 56.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'key_clk_dvd/new_clk'
@@ -1200,7 +1228,7 @@ Offset:              12.052ns (Levels of Logic = 5)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDC:C->Q              3   0.626   1.066  gate_ctrl/seg_ctrller/digit_5 (gate_ctrl/seg_ctrller/digit_5)
-     LUT3:I0->O            1   0.479   0.704  gate_ctrl/seg_ctrller/display_data<0>2_SW0 (N17)
+     LUT3:I0->O            1   0.479   0.704  gate_ctrl/seg_ctrller/display_data<0>2_SW0 (N25)
      LUT4:I3->O            4   0.479   0.949  gate_ctrl/seg_ctrller/display_data<0>2 (gate_ctrl/seg_ctrller/N4)
      LUT4:I1->O            7   0.479   1.201  gate_ctrl/seg_ctrller/display_data<3>72 (gate_ctrl/seg_ctrller/display_data<3>)
      LUT4:I0->O            1   0.479   0.681  gate_ctrl/seg_ctrller/Mrom_seg_int51 (segment_5_OBUF)
@@ -1242,8 +1270,8 @@ Offset:              10.712ns (Levels of Logic = 5)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDCE:C->Q             2   0.626   0.804  gate_ctrl/shift_reg/REG2/reg0[1].reg/data (gate_ctrl/shift_reg/REG2/reg0[1].reg/data)
-     LUT4:I2->O            1   0.479   0.000  gate_ctrl/seg_ctrller/display_data<1>72_SW0_F (N352)
-     MUXF5:I0->O           1   0.314   0.740  gate_ctrl/seg_ctrller/display_data<1>72_SW0 (N322)
+     LUT4:I2->O            1   0.479   0.000  gate_ctrl/seg_ctrller/display_data<1>72_SW0_F (N294)
+     MUXF5:I0->O           1   0.314   0.740  gate_ctrl/seg_ctrller/display_data<1>72_SW0 (N272)
      LUT4:I2->O            7   0.479   1.201  gate_ctrl/seg_ctrller/display_data<1>72 (gate_ctrl/seg_ctrller/display_data<1>)
      LUT4:I0->O            1   0.479   0.681  gate_ctrl/seg_ctrller/Mrom_seg_int71 (segment_7_OBUF)
      OBUF:I->O                 4.909          segment_7_OBUF (segment<7>)
@@ -1255,7 +1283,7 @@ Offset:              10.712ns (Levels of Logic = 5)
 Timing constraint: Default path analysis
   Total number of paths / destination ports: 24 / 24
 -------------------------------------------------------------------------
-Delay:               7.491ns (Levels of Logic = 2)
+Delay:               9.644ns (Levels of Logic = 3)
   Source:            RSTB (PAD)
   Destination:       led_out<23> (PAD)
 
@@ -1263,23 +1291,24 @@ Delay:               7.491ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            92   0.715   1.867  RSTB_IBUF (RSTB_IBUF)
+     IBUF:I->O             5   0.715   0.783  RSTB_IBUF (RSTB_IBUF)
+     INV:I->O            275   0.479   2.758  u_tft_lcd/RSTB_inv1_INV_0 (rst_inv)
      OBUF:I->O                 4.909          led_out_23_OBUF (led_out<23>)
     ----------------------------------------
-    Total                      7.491ns (5.624ns logic, 1.867ns route)
-                                       (75.1% logic, 24.9% route)
+    Total                      9.644ns (6.103ns logic, 3.541ns route)
+                                       (63.3% logic, 36.7% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 14.00 secs
-Total CPU time to Xst completion: 14.56 secs
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 14.36 secs
  
 --> 
 
-Total memory usage is 305920 kilobytes
+Total memory usage is 306944 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   74 (   0 filtered)
+Number of warnings :   75 (   0 filtered)
 Number of infos    :   11 (   0 filtered)
 

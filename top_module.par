@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-WIN-TDOA7OBESL6::  Sun Jun 12 15:25:47 2016
+WIN-TDOA7OBESL6::  Sun Jun 12 15:48:20 2016
 
 par -w -intstyle ise -ol high -t 1 top_module_map.ncd top_module.ncd
 top_module.pcf 
@@ -44,7 +44,7 @@ Device Utilization Summary:
 
    Number of MULT18X18s                      3 out of 40      7%
    Number of RAMB16s                         6 out of 40     15%
-   Number of Slices                        504 out of 20480   2%
+   Number of Slices                        525 out of 20480   2%
       Number of SLICEMs                      0 out of 10240   0%
 
 
@@ -72,37 +72,37 @@ Total REAL time at the beginning of Placer: 25 secs
 Total CPU  time at the beginning of Placer: 1 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:5c4ec07d) REAL time: 28 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:fd3782fd) REAL time: 28 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:5c4ec07d) REAL time: 28 secs 
+Phase 2.7  Design Feasibility Check (Checksum:fd3782fd) REAL time: 28 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:5c4ec07d) REAL time: 28 secs 
+Phase 3.31  Local Placement Optimization (Checksum:fd3782fd) REAL time: 28 secs 
 
 Phase 4.2  Initial Clock and IO Placement
 
-Phase 4.2  Initial Clock and IO Placement (Checksum:2ca16366) REAL time: 28 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:c10e864) REAL time: 28 secs 
 
 Phase 5.36  Local Placement Optimization
-Phase 5.36  Local Placement Optimization (Checksum:2ca16366) REAL time: 28 secs 
+Phase 5.36  Local Placement Optimization (Checksum:c10e864) REAL time: 28 secs 
 
 Phase 6.8  Global Placement
-...................................................................................
+.........................................................
 ..
-.................................................................................................................
-.........
+............................
 ..
-Phase 6.8  Global Placement (Checksum:629a48a3) REAL time: 31 secs 
+..
+Phase 6.8  Global Placement (Checksum:f23bc3f9) REAL time: 31 secs 
 
 Phase 7.5  Local Placement Optimization
-Phase 7.5  Local Placement Optimization (Checksum:629a48a3) REAL time: 31 secs 
+Phase 7.5  Local Placement Optimization (Checksum:f23bc3f9) REAL time: 31 secs 
 
 Phase 8.18  Placement Optimization
-Phase 8.18  Placement Optimization (Checksum:130344a3) REAL time: 32 secs 
+Phase 8.18  Placement Optimization (Checksum:fa713989) REAL time: 32 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:130344a3) REAL time: 32 secs 
+Phase 9.5  Local Placement Optimization (Checksum:fa713989) REAL time: 32 secs 
 
 Total REAL time to Placer completion: 32 secs 
 Total CPU  time to Placer completion: 8 secs 
@@ -113,13 +113,13 @@ Writing design to file top_module.ncd
 Starting Router
 
 
-Phase  1  : 3372 unrouted;      REAL time: 33 secs 
+Phase  1  : 3477 unrouted;      REAL time: 33 secs 
 
-Phase  2  : 3090 unrouted;      REAL time: 34 secs 
+Phase  2  : 3181 unrouted;      REAL time: 34 secs 
 
-Phase  3  : 464 unrouted;      REAL time: 34 secs 
+Phase  3  : 409 unrouted;      REAL time: 35 secs 
 
-Phase  4  : 616 unrouted; (Par is working to improve performance)     REAL time: 36 secs 
+Phase  4  : 462 unrouted; (Par is working to improve performance)     REAL time: 37 secs 
 
 Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 37 secs 
 
@@ -136,9 +136,9 @@ Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 4
 Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 42 secs 
 
 Phase 11  : 0 unrouted; (Par is working to improve performance)     REAL time: 42 secs 
-WARNING:Route:455 - CLK Net:gate_ctrl/seg_dvd/new_clk may have excessive skew because 
-      0 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
 WARNING:Route:455 - CLK Net:key_clk_dvd/new_clk may have excessive skew because 
+      0 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:gate_ctrl/seg_dvd/new_clk may have excessive skew because 
       0 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
 WARNING:Route:455 - CLK Net:keypad_cntrller/x4_DVD/d_clk may have excessive skew because 
       0 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
@@ -162,22 +162,22 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|         dig_clk/clk |      BUFGMUX4| No   |   69 |  0.293     |  1.115      |
+|         dig_clk/clk |      BUFGMUX4| No   |   71 |  0.366     |  1.130      |
 +---------------------+--------------+------+------+------------+-------------+
-|           clk_BUFGP |      BUFGMUX0| No   |   23 |  0.162     |  0.954      |
+|           clk_BUFGP |      BUFGMUX0| No   |   40 |  0.343     |  1.085      |
 +---------------------+--------------+------+------+------------+-------------+
-|      u_lcd_clk/dclk |      BUFGMUX3| No   |   58 |  0.335     |  1.120      |
+|      u_lcd_clk/dclk |      BUFGMUX3| No   |   43 |  0.340     |  1.087      |
 +---------------------+--------------+------+------+------------+-------------+
-| key_clk_dvd/new_clk |         Local|      |    7 |  0.099     |  3.766      |
+| key_clk_dvd/new_clk |         Local|      |    7 |  0.034     |  3.776      |
 +---------------------+--------------+------+------+------------+-------------+
 |gate_ctrl/number_eve |              |      |      |            |             |
-|                  nt |         Local|      |   16 |  0.368     |  3.623      |
+|                  nt |         Local|      |   16 |  0.316     |  3.549      |
 +---------------------+--------------+------+------+------------+-------------+
 |gate_ctrl/seg_dvd/ne |              |      |      |            |             |
-|               w_clk |         Local|      |    6 |  0.003     |  4.539      |
+|               w_clk |         Local|      |    6 |  0.003     |  3.784      |
 +---------------------+--------------+------+------+------------+-------------+
 |keypad_cntrller/x4_D |              |      |      |            |             |
-|            VD/d_clk |         Local|      |   11 |  0.390     |  3.427      |
+|            VD/d_clk |         Local|      |   11 |  0.233     |  3.228      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -197,26 +197,26 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net key | SETUP       |         N/A|     2.645ns|     N/A|           0
-  _clk_dvd/new_clk                          | HOLD        |     0.739ns|            |       0|           0
+  Autotimespec constraint for clock net key | SETUP       |         N/A|     2.878ns|     N/A|           0
+  _clk_dvd/new_clk                          | HOLD        |     0.784ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net dig | SETUP       |         N/A|    10.167ns|     N/A|           0
-  _clk/clk                                  | HOLD        |     0.902ns|            |       0|           0
+  Autotimespec constraint for clock net dig | SETUP       |         N/A|    11.125ns|     N/A|           0
+  _clk/clk                                  | HOLD        |     0.832ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|     4.802ns|     N/A|           0
-  _BUFGP                                    | HOLD        |     0.832ns|            |       0|           0
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|     5.494ns|     N/A|           0
+  _BUFGP                                    | HOLD        |     0.779ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net u_l | SETUP       |         N/A|    15.433ns|     N/A|           0
-  cd_clk/dclk                               | HOLD        |     0.815ns|            |       0|           0
+  Autotimespec constraint for clock net u_l | SETUP       |         N/A|    13.163ns|     N/A|           0
+  cd_clk/dclk                               | HOLD        |     0.896ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net gat | SETUP       |         N/A|     3.522ns|     N/A|           0
-  e_ctrl/number_event                       | HOLD        |     0.225ns|            |       0|           0
+  Autotimespec constraint for clock net gat | SETUP       |         N/A|     3.018ns|     N/A|           0
+  e_ctrl/number_event                       | HOLD        |     0.433ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net gat | SETUP       |         N/A|     2.113ns|     N/A|           0
-  e_ctrl/seg_dvd/new_clk                    | HOLD        |     0.911ns|            |       0|           0
+  Autotimespec constraint for clock net gat | SETUP       |         N/A|     1.827ns|     N/A|           0
+  e_ctrl/seg_dvd/new_clk                    | HOLD        |     0.773ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net key | SETUP       |         N/A|     5.369ns|     N/A|           0
-  pad_cntrller/x4_DVD/d_clk                 | HOLD        |     0.871ns|            |       0|           0
+  Autotimespec constraint for clock net key | SETUP       |         N/A|     5.569ns|     N/A|           0
+  pad_cntrller/x4_DVD/d_clk                 | HOLD        |     0.746ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -237,7 +237,7 @@ WARNING:Par:283 - There are 9 loadless signals in this design. This design will 
 Total REAL time to PAR completion: 43 secs 
 Total CPU time to PAR completion: 19 secs 
 
-Peak Memory Usage:  400 MB
+Peak Memory Usage:  393 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.
